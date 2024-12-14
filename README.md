@@ -1,6 +1,6 @@
 # 👋 Hey there! I'm **Eyuvaraj D**  
 
-I'm a passionate AI/ML developer and aspiring technologist, currently working as an **AI/ML Intern** at **Yuvabe** in Auroville, India. I specialize in streamlining operations, building microservices, and deploying machine learning solutions. I'm always excited about new technologies and love solving problems that impact people and businesses.
+I'm a passionate AI/ML developer and aspiring technologist, currently working as an **AI/ML Developer** at **Yuvabe** in Auroville, India. I specialize in streamlining operations, building microservices, and deploying machine learning solutions. I'm always excited about new technologies and love solving problems that impact people and businesses.
 
 ---
 
