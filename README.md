@@ -31,6 +31,3 @@ I'm a passionate AI/ML developer. I specialize in streamlining operations, build
 
 ---
 
-### 📊 **GitHub Stats**  
-![Eyuvaraj's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Eyuvaraj&show_icons=true&count_private=true&hide_title=true&hide=prs&theme=radical)
-
