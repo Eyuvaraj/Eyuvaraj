@@ -1,33 +1,57 @@
 # 👋 Hey there! I'm **Eyuvaraj D**  
 
-I'm a passionate AI/ML developer. I specialize in streamlining operations, building microservices, and deploying machine learning solutions. I'm always excited about new technologies and love solving problems that impact people and businesses.
+I’m an **AI / ML Engineer** working primarily with Python, focused on building dependable back-end systems and applied AI solutions. My work revolves around generative AI, retrieval-based systems, and production-ready machine learning services.
+
+I enjoy engineering that is simple, well-structured, and built with long-term use in mind.
 
 ---
 
-### 🔧 **Technologies & Tools**  
-- **Programming Languages**: Python, Javascript, C#
-- **Web Development**: Flask, FastAPI, ASP.NET, Streamlit
-- **Machine Learning & Data Science**: Pandas, PyTorch, GenAI
-- **Cloud & Deployment**: Docker, Azure
-- **Version Control & Collaboration**: Git, Agile Methodologies, Jira
-
-### 🧠 **Core Skills**  
-- **Problem-Solving**: Love tackling complex challenges with creative, data-driven solutions.  
-- **Team Collaboration**: Experienced in working within cross-functional teams to deliver impactful results.  
-- **Adaptability**: Quick to adapt and learn new technologies in fast-paced environments.  
-- **Time Management**: Efficiently balancing multiple tasks while ensuring top-quality results.
+## 👨‍💻 About Me
+- AI / ML Engineer with experience delivering production-grade generative AI systems
+- Worked on RAG-based advisors and automation tools across multiple domains
+- Involved across model development, API design, and deployment
+- Value clarity, collaboration, and steady problem-solving over quick hacks
 
 ---
 
-### 🌱 **Currently Exploring**  
-- Passionate about contributing to the **open-source** community and sharing knowledge.  
+## 🛠 Skills & Tools
+
+**Core**
+- Python, FastAPI, Flask  
+- Generative AI, RAG  
+- LangChain, OpenAI APIs  
+- Hugging Face, PyTorch  
+
+**Infrastructure & Workflow**
+- Docker, Linux  
+- Git, Agile practices  
+- Basic MLOps pipelines  
+
+**Frontend & Utilities**
+- Vue.js, Streamlit, Jinja  
+- Database management  
+
+**Soft Skills**
+- Clear communication  
+- Analytical problem-solving  
+- Adaptable and organized  
+- Team-oriented  
+
 
 ---
 
-### 📬 **Let's Connect!**  
-- **Email**: [eyuvaraj.d@gmail.com](mailto:eyuvaraj.d@gmail.com)  
-- **LinkedIn**: [linkedin.com/in/eyuv](https://www.linkedin.com/in/eyuv)  
-- **GitHub**: [github.com/Eyuvaraj](https://github.com/Eyuvaraj)  
+
+## 🌱 Open to Opportunities
+I’m open to opportunities where I can work on real-world problems, particularly in areas that are new, emerging, or innovative ideas using AI and software.
+
 
 ---
 
+
+## 🤝 Connect
+- 📧 Email: eyuvaraj.d@gmail.com  
+- 💼 LinkedIn: https://www.linkedin.com/in/eyuv/  
+- 🧑‍💻 GitHub: https://github.com/Eyuvaraj  
+
+
+---
