@@ -4,7 +4,6 @@ I’m an **AI / ML Engineer** working primarily with Python, focused on building
 
 I enjoy engineering that is simple, well-structured, and built with long-term use in mind.
 
----
 
 ## 👨‍💻 About Me
 - AI / ML Engineer with experience delivering production-grade generative AI systems
@@ -12,7 +11,6 @@ I enjoy engineering that is simple, well-structured, and built with long-term us
 - Involved across model development, API design, and deployment
 - Value clarity, collaboration, and steady problem-solving over quick hacks
 
----
 
 ## 🛠 Skills & Tools
 
@@ -38,14 +36,10 @@ I enjoy engineering that is simple, well-structured, and built with long-term us
 - Team-oriented  
 
 
----
-
 
 ## 🌱 Open to Opportunities
 I’m open to opportunities where I can work on real-world problems, particularly in areas that are new, emerging, or innovative ideas using AI and software.
 
-
----
 
 
 ## 🤝 Connect
@@ -54,4 +48,3 @@ I’m open to opportunities where I can work on real-world problems, particularl
 - 🧑‍💻 GitHub: https://github.com/Eyuvaraj  
 
 
----
