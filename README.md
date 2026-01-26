@@ -45,6 +45,7 @@ I’m open to opportunities where I can work on real-world problems, particularl
 ## 🤝 Connect
 - 📧 Email: eyuvaraj.d@gmail.com  
 - 💼 LinkedIn: https://www.linkedin.com/in/eyuv/  
-- 🧑‍💻 GitHub: https://github.com/Eyuvaraj  
+- 🧑‍💻 GitHub: https://github.com/Eyuvaraj
+- 📄 Resume: https://drive.google.com/file/d/1Yyr4p7cMjhPOInVqzB5sRWtduFF0S4qv/view?usp=sharing
 
 
