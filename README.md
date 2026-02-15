@@ -41,11 +41,9 @@ I enjoy engineering that is simple, well-structured, and built with long-term us
 I’m open to opportunities where I can work on real-world problems, particularly in areas that are new, emerging, or innovative ideas using AI and software.
 
 
-
 ## 🤝 Connect
-- 📧 Email: eyuvaraj.d@gmail.com  
-- 💼 LinkedIn: https://www.linkedin.com/in/eyuv/  
-- 🧑‍💻 GitHub: https://github.com/Eyuvaraj
-- 📄 Resume: https://drive.google.com/file/d/1Yyr4p7cMjhPOInVqzB5sRWtduFF0S4qv/view?usp=sharing
 
-
+📧 **Email**: [eyuvaraj.d@gmail.com](mailto:eyuvaraj.d@gmail.com)  
+💼 **LinkedIn**: [linkedin.com/in/eyuv](https://www.linkedin.com/in/eyuv/)  
+🧑‍💻 **GitHub**: [github.com/Eyuvaraj](https://github.com/Eyuvaraj)  
+📄 **Resume**: [View Resume](https://drive.google.com/file/d/1Yyr4p7cMjhPOInVqzB5sRWtduFF0S4qv/view?usp=sharing)
