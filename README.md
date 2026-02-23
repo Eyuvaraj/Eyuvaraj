@@ -14,26 +14,20 @@ I enjoy engineering that is simple, well-structured, and built with long-term us
 
 ## 🛠 Skills & Tools
 
-**Core**
-- Python, FastAPI, Flask  
-- Generative AI, RAG  
-- LangChain, OpenAI APIs  
-- Hugging Face, PyTorch  
+### AI / GenAI
+`Python` `Large Language Models` `RAG` `LangChain` `OpenAI API` `Hugging Face`
 
-**Infrastructure & Workflow**
-- Docker, Linux  
-- Git, Agile practices  
-- Basic MLOps pipelines  
+### Backend
+`FastAPI` `Flask` `REST APIs` `Microservices`
 
-**Frontend & Utilities**
-- Vue.js, Streamlit, Jinja  
-- Database management  
+### Data & Storage
+`PostgreSQL` `Redis` `Pinecone` `Vector Databases`
 
-**Soft Skills**
-- Clear communication  
-- Analytical problem-solving  
-- Adaptable and organized  
-- Team-oriented  
+### Infrastructure
+`Docker` `Linux` `Git`
+
+### Personal Strengths
+`Problem Solving` `Creativity` `Attention to Detail` `Open-mindedness` `Organisation`
 
 
 
@@ -43,7 +37,7 @@ I’m open to opportunities where I can work on real-world problems, particularl
 
 ## 🤝 Connect
 
-- **Email**: [eyuvaraj.d@gmail.com](mailto:eyuvaraj.d@gmail.com)  
-- **LinkedIn**: [linkedin.com/in/eyuv](https://www.linkedin.com/in/eyuv/)  
-- **GitHub**: [github.com/Eyuvaraj](https://github.com/Eyuvaraj)  
-- **Resume**: [View Resume](https://drive.google.com/file/d/1Yyr4p7cMjhPOInVqzB5sRWtduFF0S4qv/view?usp=sharing)
+- [eyuvaraj.d@gmail.com](mailto:eyuvaraj.d@gmail.com)  
+- [linkedin.com/in/eyuv](https://www.linkedin.com/in/eyuv/)  
+- [github.com/Eyuvaraj](https://github.com/Eyuvaraj)  
+- [View Resume](https://drive.google.com/file/d/1Yyr4p7cMjhPOInVqzB5sRWtduFF0S4qv/view?usp=sharing)
