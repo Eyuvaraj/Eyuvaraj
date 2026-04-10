@@ -1,4 +1,4 @@
-# 👋 Hey there! I'm **Eyuvaraj D**  
+# 🍀 Hey there! I'm **Eyuvaraj**  
 
 I’m an **AI / ML Engineer** working primarily with Python, focused on building dependable back-end systems and applied AI solutions. My work revolves around generative AI, retrieval-based systems, and production-ready machine learning services.
 
@@ -38,6 +38,6 @@ I’m open to opportunities where I can work on real-world problems, particularl
 ## 🤝 Connect
 
 - [eyuvaraj.d@gmail.com](mailto:eyuvaraj.d@gmail.com)  
-- [linkedin.com/in/eyuv](https://www.linkedin.com/in/eyuv/)  
+- [linkedin.com/in/eyuv](https://www.linkedin.com/in/eyuvaraj/)  
 - [github.com/Eyuvaraj](https://github.com/Eyuvaraj)  
-- [View Resume](https://drive.google.com/file/d/1Yyr4p7cMjhPOInVqzB5sRWtduFF0S4qv/view?usp=sharing)
+- [Resume](https://drive.google.com/file/d/1Yyr4p7cMjhPOInVqzB5sRWtduFF0S4qv/view?usp=sharing)
