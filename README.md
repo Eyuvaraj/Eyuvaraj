@@ -1,4 +1,4 @@
-# 🍀 Hey there! I'm **Eyuvaraj**  
+# 👋 Hey there! I'm **Eyuvaraj**
 
 I’m an **AI / ML Engineer** working primarily with Python, focused on building dependable back-end systems and applied AI solutions. My work revolves around generative AI, retrieval-based systems, and production-ready machine learning services.
 
@@ -6,10 +6,12 @@ I enjoy engineering that is simple, well-structured, and built with long-term us
 
 
 ## 👨‍💻 About Me
-- AI / ML Engineer with experience delivering production-grade generative AI systems
-- Worked on RAG-based advisors and automation tools across multiple domains
-- Involved across model development, API design, and deployment
-- Value clarity, collaboration, and steady problem-solving over quick hacks
+
+* Building **agentic AI systems & RAG pipelines** used in real-world applications
+* Experience across **LLMs, backend systems, and end-to-end ML deployment**
+* Designed **scalable APIs and microservices** for AI-powered products
+* Worked on **multimodal and applied AI systems** across domains
+* Prefer **clarity, simplicity, and long-term thinking** over quick hacks
 
 
 ## 🛠 Skills & Tools
