@@ -41,5 +41,4 @@ I’m open to opportunities where I can work on real-world problems, particularl
 
 - [eyuvaraj.d@gmail.com](mailto:eyuvaraj.d@gmail.com)  
 - [linkedin.com/in/eyuvaraj](https://www.linkedin.com/in/eyuvaraj/)  
-- [github.com/eyuvaraj](https://github.com/Eyuvaraj)  
-- [Resume](https://drive.google.com/file/d/1Yyr4p7cMjhPOInVqzB5sRWtduFF0S4qv/view?usp=sharing)
+- [Resume](https://drive.google.com/file/d/173EfJVKdboLe4QiwI9zOmCzeVBX2KPse/view?usp=sharing)
