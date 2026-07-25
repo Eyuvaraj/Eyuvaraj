@@ -1,3 +1,82 @@
+# Founding Engineer | TRIPKNOT (Aneeras LLP)  
+Apr 2026 – Present • Remote
+
+## AI Itinerary Generation Engine
+
+### Co-Built a Multi-Provider AI Itinerary Engine
+Co-built the product's core differentiator: a multi-provider LLM itinerary engine with Gemini as the primary model (a Pydantic-constrained JSON schema) and Groq/Llama-3 as an automatic fallback, with token-cost and latency instrumentation per generation. Designed a place-scoring and diversity algorithm blending log-scaled popularity with rating-count and landmark/trending/hidden-gem signals, per-request seed jitter so repeated requests don't return identical results, an "anchor" mechanism guaranteeing top landmarks always appear, round-robin category-diversity fill, and budget-tier filtering with graceful relaxation when strict filters return too few results. A Streamlit proof-of-concept (geo-clustering, greedy TSP day-ordering, LLM-based scheduling) preceded and informed the production rewrite.
+
+---
+
+## Trust & Safety and Identity Verification
+
+### Designed and Built a KYC/Aadhaar Verification System
+Designed and built an Aadhaar/KYC identity-verification system, including a "strangers trip" flow verifying participant identity specifically for trips where people may be joining others they don't already know — spanning the trip/user data models, backend validation logic, and a matching admin review UI for staff to approve or reject verification submissions. Also fixed a production GCS upload-authentication bug (switching to Firebase service-account-key auth after a UBLA/`make_public` failure) and built profile-image upload handling and user-token verification endpoints.
+
+---
+
+## Admin Backend and Console
+
+### Built a Full-Stack Admin Platform for Moderation and Analytics
+Built the backend and admin console together across destination/place/state CRUD, CSV import/export, an analytics dashboard with real visualizations, trip moderation including a two-step host-verification approval flow, and a soft-cancel-with-audit-trail redesign that replaced hard deletes with status/reason/audit fields for compliance.
+
+---
+
+## Analytics and Gamification
+
+### Implemented Non-Blocking Event Tracking and Gamification
+Implemented fire-and-forget event tracking (non-blocking, so instrumentation never adds latency to user-facing requests), atomic counters, a trending/popularity recalculation job, public leaderboard endpoints, and badges.
+
+---
+
+## Background Ranking and Scoring Service
+
+### Designed a Standalone Trending/Popularity Scoring Pipeline
+Designed a standalone, dependency-ordered scoring pipeline (places → destinations → states) computing trending scores (time-decay, Reddit-style hot-ranking math, 48-hour half-life over a rolling window) and popularity scores (a weighted blend of review quality, normalized importance, engagement, and recent momentum, with a seasonal boost for in-season entities). Every threshold is a tunable config value rather than a hardcoded constant, and the normalization approach (percentile-based, dynamic top-K% trending cutoff) is designed to behave sensibly from pre-launch traffic through much larger scale.
+
+---
+
+## Mobile App Features
+
+### Shipped Location-Aware Personalization and Discovery Features
+Shipped a location/personalization pipeline for the Expo/React Native app (home feed and discover results respond to the user's real location, with a fix distinguishing GPS-sourced vs. manually-picked city so background sync stops overwriting a manual choice), a full "Explore India" states feature (region-filterable browsing, state detail pages with hero content and best-time-to-visit info), a notification-preferences screen, search/category filtering, and a native file-upload fix routing Android/iOS photo picker uploads through Expo's native upload API.
+
+---
+
+## Data Platform and R&D
+
+### Built an Image-Quality Vetting Pipeline and Destination ETL Tooling
+Built an image-quality vetting pipeline for destination photos, iterating from a heavier OCR-plus-frequency-analysis watermark detector to a fine-tuned vision classifier after tuning against real false positives on food photography, plus a companion asset-migration tool converting and re-hosting images to WebP on GCS with structured audit logging. Built an ETL tool that ingests destination data from spreadsheets/CSVs into the production data model (slug generation, geocoding, tag/image parsing), pushing through the authenticated backend API with dry-run and duplicate-detection support rather than writing to the database directly.
+
+---
+
+## DevOps and Cloud Infrastructure
+
+### Set Up CI/CD and Cloud Deployment
+Set up GitHub Actions CI (test plus Docker build) and CD (automatic staging deploy, manual-gated production promotion) for the backend, deployed on Google Cloud Run in `asia-south1`, configured GCP Workload Identity Federation so CI never holds a long-lived cloud credential, and wired Sentry error/performance monitoring into both the backend and the mobile app.
+
+---
+
+## Key Highlights
+
+• Co-built an AI itinerary engine with multi-provider LLM routing (Gemini primary, Groq/Llama fallback) and a custom place-scoring/diversity algorithm for budget-aware itineraries.
+
+• Designed and built a KYC/Aadhaar identity-verification system for trips with unfamiliar participants, spanning backend data models and an admin review console.
+
+• Built the admin console and backend for content moderation and analytics, including a two-step verification flow and an audit-logged cancellation system.
+
+• Implemented fire-and-forget analytics and gamification (event tracking, leaderboards, badges) with zero added latency to user-facing requests.
+
+• Designed a standalone scoring service computing trending/popularity rankings via time-decay and multi-factor models, tuned to stay stable from launch through scale.
+
+• Shipped mobile features spanning location-aware personalization, a region-browsable "Explore India" feature, and notification preferences in React Native/Expo.
+
+• Built an image-quality vetting pipeline and ETL tooling to ingest and maintain destination content at scale.
+
+• Set up CI/CD and cloud deployment (GitHub Actions, Docker, Cloud Run, Workload Identity Federation), with Sentry monitoring across backend and mobile.
+
+---
+
 # AI-ML Engineer | YUVABE  
 Jan 2024 – Aug 2025 • Auroville, Tamil Nadu
 
