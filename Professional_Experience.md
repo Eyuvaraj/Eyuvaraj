@@ -1,5 +1,5 @@
 # Founding Engineer | TRIPKNOT (Aneeras LLP)  
-Apr 2026 – Present • Remote
+Apr 2026 – Present • Pondicherry
 
 ## AI Itinerary Generation Engine
 
