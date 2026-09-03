@@ -9,7 +9,7 @@ Two top-level folders, `Backend/` and `Frontend/`, no monorepo tooling. The back
 ### Key Features
 - **CRUD hierarchy** Subject → Chapter → Quiz → Question, each with cascading deletes, exposed via admin-only endpoints.
 - **Quiz-taking and scoring**, tracking submission state and computed scores per attempt.
-- **JWT auth with decorator-enforced RBAC** (`login_required`/`admin_required`) applied across the API's 50 endpoints.
+- **JWT auth with decorator-enforced RBAC** (`login_required`/`admin_required`) applied across protected administrative and user routes.
 - **Celery Beat crontab-scheduled background jobs** — daily quiz reminders and monthly performance reports — routed across three dedicated task queues (emails, reports, exports), backed by Redis as broker and result store.
 - **Redis-backed API response caching** with automatic in-memory fallback if Redis is unreachable.
 - **Asynchronous CSV export** via Celery, with progress polled through a dedicated task-status endpoint.
@@ -36,8 +36,6 @@ A layered Flask structure: SQLAlchemy models in one module, three Flask **Bluepr
 - Follow/unfollow creators and like/dislike across tracks, albums, playlists, and announcements.
 - An **admin dashboard** with usage counts, top creators, and 7-day trending tracks/albums, rendered as on-demand matplotlib charts.
 - One JSON API endpoint exposing song/user/creator data.
-
-**Known limitation (kept here for accuracy):** admin routes are gated by login only, not a server-side role check — the admin/user role data model is real, but route-level authorization isn't fully enforced. Audio playback is standard Flask static-file serving of DB-resolved file paths, not a custom streaming pipeline.
 
 ### Scale & Results
 30 routes across 3 blueprints, 14 SQLAlchemy models, 59 commits over roughly 5.5 months of solo development.
@@ -76,7 +74,7 @@ Ingests PDF/HTML source documents, chunks them, and encodes chunks with a locall
 
 ### Key Features
 - **Dual-mode LLM routing**: Groq Llama-3-70B in dev, an OpenAI-compatible Llama-3-8B endpoint in production, each with separately tuned retrieval parameters.
-- **Score-thresholded similarity search** that keeps irrelevant chunks out of the prompt.
+- **Chroma distance-thresholded retrieval** that keeps irrelevant chunks out of the prompt.
 - A **persona-locked system prompt** scoping the bot to IITM BS-program queries and discouraging fabricated answers.
 - A **batch embed-and-upsert ingestion pipeline** with ID-based deduplication.
 - Two independently Dockerized services (backend, frontend) with Azure deployment configuration.

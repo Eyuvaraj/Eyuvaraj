@@ -1,7 +1,12 @@
 # Achievements
 
-🏆 **1st Place Winner — GenAI Hackathon (Paradox 2024, IIT Madras)**
+🏆 **1st Place Winner — IITM BS GenAI Hackathon (Paradox 2024, IIT Madras)**
 
-- Built a **RAG-based chatbot** as a solo participant during a **36-hour hackathon**.
-- Competed against **50+ team-based competitors**.
-- Awarded **₹25,000 cash prize**.
+- Built an end-to-end **RAG-based chatbot** as a solo participant during a **32-hour hackathon**.
+- Competed against **30+ teams**, with up to five members per team.
+- Awarded a **₹25,000 cash prize**.
+
+🏆 **5th Place — goboxd (Paradox 2026, IIT Madras)**
+
+- Built a Go HTTP service that compiles and runs untrusted code in per-request `nsjail` sandboxes.
+- Competed across **three stages** against **50+ teams** and ranked **5th in the final stage**; the project is open source on GitHub.

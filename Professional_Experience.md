@@ -1,10 +1,12 @@
-# Founding Engineer | TRIPKNOT (Aneeras LLP)  
-Apr 2026 – Present • Pondicherry
+# Founding Engineer | Aneeras LLP  
+Apr 2026 – Present • Pondicherry, India · Hybrid
+
+*One of five founding engineers building the TripKnot product.*
 
 ## AI Itinerary Generation Engine
 
 ### Co-Built a Multi-Provider AI Itinerary Engine
-Co-built the product's core differentiator: a multi-provider LLM itinerary engine with Gemini as the primary model (a Pydantic-constrained JSON schema) and Groq/Llama-3 as an automatic fallback, with token-cost and latency instrumentation per generation. Designed a place-scoring and diversity algorithm blending log-scaled popularity with rating-count and landmark/trending/hidden-gem signals, per-request seed jitter so repeated requests don't return identical results, an "anchor" mechanism guaranteeing top landmarks always appear, round-robin category-diversity fill, and budget-tier filtering with graceful relaxation when strict filters return too few results. A Streamlit proof-of-concept (geo-clustering, greedy TSP day-ordering, LLM-based scheduling) preceded and informed the production rewrite.
+Co-built the product's core differentiator: a multi-provider LLM itinerary engine. Gemini uses a Pydantic-derived JSON schema and response validation; Groq/Llama-3 is the automatic fallback, receiving the schema in its prompt before downstream normalization. Token cost and latency are instrumented per generation. Designed a place-scoring and diversity algorithm blending log-scaled popularity with rating-count and landmark/trending/hidden-gem signals, per-request seed jitter so repeated requests don't return identical results, an "anchor" mechanism guaranteeing top landmarks always appear, round-robin category-diversity fill, and budget-tier filtering with graceful relaxation when strict filters return too few results. A Streamlit proof-of-concept (geo-clustering, greedy TSP day-ordering, LLM-based scheduling) preceded and informed the production rewrite.
 
 ---
 
@@ -25,7 +27,7 @@ Built the backend and admin console together across destination/place/state CRUD
 ## Analytics and Gamification
 
 ### Implemented Non-Blocking Event Tracking and Gamification
-Implemented fire-and-forget event tracking (non-blocking, so instrumentation never adds latency to user-facing requests), atomic counters, a trending/popularity recalculation job, public leaderboard endpoints, and badges.
+Implemented fire-and-forget event tracking that does not await completion in the user-facing request path, alongside atomic counters, a trending/popularity recalculation job, public leaderboard endpoints, and badges.
 
 ---
 
@@ -46,7 +48,7 @@ Shipped a location/personalization pipeline for the Expo/React Native app (home 
 ## Data Platform and R&D
 
 ### Built an Image-Quality Vetting Pipeline and Destination ETL Tooling
-Built an image-quality vetting pipeline for destination photos, iterating from a heavier OCR-plus-frequency-analysis watermark detector to a fine-tuned vision classifier after tuning against real false positives on food photography, plus a companion asset-migration tool converting and re-hosting images to WebP on GCS with structured audit logging. Built an ETL tool that ingests destination data from spreadsheets/CSVs into the production data model (slug generation, geocoding, tag/image parsing), pushing through the authenticated backend API with dry-run and duplicate-detection support rather than writing to the database directly.
+Co-built with Keerthana an image-quality vetting pipeline for destination photos, iterating from a heavier OCR-plus-frequency-analysis watermark detector to a fine-tuned vision classifier after tuning against real false positives on food photography, plus a companion asset-migration tool converting and re-hosting images to WebP on GCS with structured audit logging. Built an ETL tool that ingests destination data from spreadsheets/CSVs into the production data model (slug generation, geocoding, tag/image parsing), pushing through the authenticated backend API with dry-run and duplicate-detection support rather than writing to the database directly.
 
 ---
 
@@ -65,7 +67,7 @@ Set up GitHub Actions CI (test plus Docker build) and CD (automatic staging depl
 
 • Built the admin console and backend for content moderation and analytics, including a two-step verification flow and an audit-logged cancellation system.
 
-• Implemented fire-and-forget analytics and gamification (event tracking, leaderboards, badges) with zero added latency to user-facing requests.
+• Implemented fire-and-forget analytics and gamification (event tracking, leaderboards, badges) without awaiting analytics work in the user-facing request path.
 
 • Designed a standalone scoring service computing trending/popularity rankings via time-decay and multi-factor models, tuned to stay stable from launch through scale.
 
@@ -77,8 +79,10 @@ Set up GitHub Actions CI (test plus Docker build) and CD (automatic staging depl
 
 ---
 
-# AI-ML Engineer | YUVABE  
-Jan 2024 – Aug 2025 • Auroville, Tamil Nadu
+# AI/ML Engineer | YUVABE  
+Jul 2024 – Aug 2025 • Auroville, Tamil Nadu
+
+*Previously AI/ML Intern at YUVABE, Jan 2024 – Jun 2024.*
 
 ## High-Impact Architecture and Platform Work
 
@@ -86,7 +90,7 @@ Jan 2024 – Aug 2025 • Auroville, Tamil Nadu
 Architected and deployed a production multi-agent AI platform serving 100,000+ users across healthcare, finance, education, and marketing domains. Designed a routing layer that dynamically directs user queries to specialized agents for health advice, policy analysis, and document processing. Implemented OpenAI function calling, RAG pipelines, and multimodal text and voice interaction through a unified FastAPI backend deployed on Azure with Docker. This architecture enabled scalable, domain-aware AI responses while reducing hallucinations through grounded retrieval and agent specialization.
 
 ### Built a Production Retrieval-Augmented Generation Platform
-Developed a full production RAG system capable of handling large document collections such as insurance policies and medical reports. Implemented the complete pipeline including document parsing, semantic chunking, embedding generation using OpenAI models, vector storage in Pinecone, similarity search retrieval, and grounded response generation. Served the system through a FastAPI backend with conversation persistence via Supabase, enabling reliable document-aware question answering for thousands of users.
+Developed a full production RAG system capable of handling large document collections such as insurance policies and medical reports. Implemented the complete pipeline including document parsing, semantic chunking, embedding generation using OpenAI models, vector storage in Pinecone, similarity search retrieval, and grounded response generation. Served the system through a FastAPI backend with conversation persistence via Supabase, enabling reliable document-aware question answering for a platform serving 100,000+ users.
 
 ### Designed AI Microservices Following MACH Architecture Principles
 Designed and deployed modular AI microservices using Python, FastAPI, Docker, and Azure cloud infrastructure. Followed MACH architecture principles to create independently deployable services for inference, document processing, classification, and conversational interaction. This approach improved maintainability, enabled horizontal scaling of AI workloads, and allowed new models or services to be deployed without disrupting existing production systems.
@@ -109,7 +113,7 @@ Developed modular LLM pipelines that automatically generate structured outputs s
 ## NLP, SMS Intelligence, and Predictive Machine Learning
 
 ### Built a Multi-Layer SMS Intelligence Pipeline
-Developed a production SMS intelligence system that converts unstructured SMS messages into structured financial insights. Designed a multi-tier pipeline using LLaMA 3.1, BERT, SetFit, and GPT-4 models to perform binary classification, hierarchical category classification, and entity extraction. Processed over 15,000 messages during experimentation and scaled the system to handle over 100,000 financial records monthly.
+Developed a production SMS intelligence system that converts unstructured SMS messages into structured financial insights. Designed a multi-tier pipeline using LLaMA 3.1, BERT, SetFit, and GPT-4 models to perform binary classification, hierarchical category classification, and entity extraction. Processed more than 100,000 SMS messages across experimentation and production use.
 
 ### Fine-Tuned Transformer Models for Noisy Real-World Data
 Fine-tuned BERT and SetFit models for SMS classification tasks involving noisy, real-world data containing informal language, abbreviations, and mixed formatting. Implemented feature engineering, training pipelines, and evaluation workflows to improve classification accuracy and robustness across different message categories.
@@ -187,7 +191,7 @@ Tested open source models for function calling reliability within multi-agent pi
 
 • Developed a large-scale medical reasoning Q&A system using 7,000 USMLE questions, generating structured reasoning traces through dynamic few-shot prompting and storing them in a Pinecone + SQLite retrieval system to enable retrieval-augmented reasoning during inference.
 
-• Built a multi-layer SMS intelligence pipeline converting raw SMS data into structured financial insights using LLaMA 3.1, BERT, SetFit, and GPT-4, implementing binary classifiers, hierarchical label trees, and LLM-based entity extraction to process over 100,000 transaction records monthly.
+• Built a multi-layer SMS intelligence pipeline converting more than 100,000 SMS messages into structured financial insights using LLaMA 3.1, BERT, SetFit, and GPT-4, with binary classifiers, hierarchical label trees, and LLM-based entity extraction.
 
 • Fine-tuned transformer models including BERT and SetFit for classification and entity extraction on noisy real-world datasets, designing training pipelines and evaluation workflows to improve robustness across unstructured SMS data.
 
