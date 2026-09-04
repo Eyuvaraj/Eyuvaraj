@@ -1,5 +1,7 @@
 # goboxd
 
+**Repository:** [goboxd](https://github.com/Eyuvaraj/goboxd) *(fork)*
+
 ## One-line summary
 Go HTTP service that compiles and runs untrusted source code against test cases inside per-request `nsjail` sandboxes. Built solo for Paradox IIT Madras 2026, goboxd competed across three stages against 50+ teams, placed fifth in the final stage, and is open source on GitHub.
 

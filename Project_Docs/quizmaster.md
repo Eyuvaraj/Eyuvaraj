@@ -1,5 +1,7 @@
 # QuizMaster
 
+**Repository:** [QuizMaster](https://github.com/Eyuvaraj/QuizMaster)
+
 ## One-line summary
 Solo full-stack quiz management app: Flask REST API (flask-restx, JWT auth) backend + Vue 3 SPA frontend, with Celery/Redis background jobs for scheduled reminders, reports, and async CSV export.
 

@@ -1,5 +1,7 @@
 # Meloverse
 
+**Repository:** [Meloverse](https://github.com/Eyuvaraj/Meloverse)
+
 ## One-line summary
 Solo academic Flask project (IIT Madras "MAD1" coursework, per README: "MAD1 Project") — a music streaming web app with user accounts, creator profiles, playlists, following, likes, and an admin panel with matplotlib-generated usage charts.
 

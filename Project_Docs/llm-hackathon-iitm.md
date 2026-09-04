@@ -1,5 +1,7 @@
 # LLM Hackathon (IITM Paradox 2024) — RAG Chatbot
 
+**Repository:** [LLM-Hackathon-IITM](https://github.com/Eyuvaraj/LLM-Hackathon-IITM)
+
 ## One-line summary
 Solo-built "IITM Infobot" during a 32-hour IITM BS GenAI Hackathon: a FastAPI backend running a retrieval-augmented pipeline (PDF/HTML ingestion → Nomic embeddings → persisted ChromaDB store → score-filtered similarity search → Groq/Llama-3 generation), served through a Chainlit chat frontend, both independently Dockerized.
 

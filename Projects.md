@@ -1,6 +1,8 @@
 # Projects
 
 ## QuizMaster
+**Repository:** [QuizMaster](https://github.com/Eyuvaraj/QuizMaster)
+
 Solo full-stack quiz management app: a Flask REST API (flask-restx, JWT auth) backend paired with a Vue 3 SPA frontend, with Celery/Redis background jobs handling scheduled reminders, reports, and asynchronous CSV export.
 
 ### Architecture
@@ -24,6 +26,8 @@ Flask, flask-restx, SQLAlchemy, Flask-JWT-Extended, Flask-Migrate, Celery, Redis
 ---
 
 ## MeloVerse
+**Repository:** [Meloverse](https://github.com/Eyuvaraj/Meloverse)
+
 Solo academic Flask project (IIT Madras "MAD1" coursework) — a music streaming web app with user accounts, creator profiles, playlists, following, likes, and an admin panel with usage analytics.
 
 ### Architecture
@@ -46,6 +50,8 @@ Flask, SQLAlchemy, Flask-Login, Jinja2, Bootstrap 5, Plyr.js, matplotlib, SQLite
 ---
 
 ## goboxd
+**Repository:** [goboxd](https://github.com/Eyuvaraj/goboxd) *(fork)*
+
 A Go HTTP service that sandboxes and runs untrusted code inside per-job **nsjail** sandboxes across 15 languages — a hackathon build at Paradox 2026, IIT Madras (team size up to 2 was allowed; entered and built solo).
 
 ### Architecture
