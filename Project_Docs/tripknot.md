@@ -10,6 +10,9 @@ A social, AI-assisted travel-itinerary planning product: a FastAPI monolith with
 - **Purpose-specific microservice and supporting tools**: one standalone background scoring microservice (`tripknot-scorer` — trending/popularity ranking with time-decay math, percentile normalization, dependency-ordered score cascades across places→destinations→states); plus supporting ETL, image-quality, and itinerary-prototyping tools rather than additional production microservices.
 - **Deployment/infra**: Docker, Google Cloud Run (`asia-south1`), GitHub Actions CI (tests + Docker build) and CD (staging → manual-promote-to-production), GCP Workload Identity Federation for keyless CI auth, Sentry across both backend and mobile.
 
+## Collaboration and Ownership Boundary
+The backend totals—approximately 21,000 lines of application code, 185 endpoints, and 23 domain routers—represent the collective work of three contributors.
+
 ## Technical Work
 
 ### AI itinerary generation engine (backend)
@@ -37,7 +40,7 @@ An image-quality vetting pipeline for destination photos — iterated from a hea
 GitHub Actions CI (test + Docker build) and CD (automatic staging deploy, manual-gated production promotion) for the backend, Google Cloud Run deployment in `asia-south1`, GCP Workload Identity Federation so CI never holds a long-lived cloud credential, and Sentry error/performance monitoring wired into both the backend and the mobile app.
 
 ## Scale signals (whole product, for context — not for a single bullet)
-- Backend: ~21,000 LOC, 185 endpoints, 23 domain modules, real production deploy pipeline (Cloud Run + CI/CD + Sentry).
+- Backend (collective work of three contributors): ~21,000 LOC, 185 endpoints, 23 domain modules, real production deploy pipeline (Cloud Run + CI/CD + Sentry).
 - Mobile app: ~27,000 LOC, Expo/React Native, EAS Build CI for Android + iOS store submission.
 - Admin console: ~17,000 LOC, Next.js 16 / React 19.
 - One purpose-specific scoring microservice, plus ETL and image-processing supporting tools, beyond the three main repositories.

@@ -71,8 +71,8 @@ and marketing domains.
 ### 3. NLP, SMS Intelligence, and Predictive Machine Learning
 - **Built a Multi-Layer SMS Intelligence Pipeline** — Developed a production
   SMS intelligence system that converts unstructured SMS messages into
-  structured financial insights. Designed a multi-tier pipeline using LLaMA
-  3.1, BERT, SetFit, and GPT-4 models to perform binary classification,
+  structured financial insights. Designed a multi-tier pipeline during the internship using LLaMA
+  3.0, BERT, SetFit, and GPT-4 models to perform binary classification,
   hierarchical category classification, and entity extraction. Processed
   more than 100,000 SMS messages across experimentation and production use.
 - **Fine-Tuned Transformer Models for Noisy Real-World Data** — Fine-tuned
@@ -95,11 +95,11 @@ and marketing domains.
   language model inference entirely offline. Used ONNX Runtime to run the
   all-MiniLM embedding model locally, ObjectBox with HNSW indexing for
   vector storage, and Llama.cpp to run small language models such as LLaMA
-  3.2 for response generation.
+  3.1 for response generation during the full-time engineer role.
 - **Benchmarked On-Device LLM Inference Across Mobile Hardware** — Conducted
   extensive benchmarking experiments to evaluate the feasibility of
   on-device AI inference. Tested models including Qwen2.5, Phi-3 Mini, and
-  LLaMA variants across ONNX Runtime and Llama.cpp environments. Achieved
+  LLaMA 3.1 across ONNX Runtime and Llama.cpp environments. Achieved
   approximately 19.6 tokens per second on a 6GB RAM Android device using a
   0.43GB quantized model, demonstrating practical feasibility for offline
   conversational AI.
@@ -163,12 +163,12 @@ and marketing domains.
 
 ### 7. LLM Evaluation, Benchmarking, and Applied Research
 - **Evaluated Open Source LLMs as Alternatives to Proprietary APIs** —
-  Conducted evaluation studies on open source models such as LLaMA, Qwen,
+  Conducted evaluation studies on open source models such as LLaMA 3.1, Qwen,
   and other emerging models as potential replacements for proprietary APIs.
   Tested their ability to perform classification, function calling, and
   generation tasks under complex routing conditions in multi-agent systems.
 - **Benchmarked Model Performance Across Hardware and Quantization Levels**
-  — Performed benchmarking experiments comparing LLaMA, Phi-3, GPT-4, and
+  — Performed benchmarking experiments comparing LLaMA 3.1, Phi-3, GPT-4, and
   GPT-3.5 across GPU hardware including dual T4 instances and A100 80GB
   accelerators. Analyzed trade-offs between 4-bit and 6-bit quantization
   strategies to balance model quality, inference latency, and memory usage.
@@ -189,7 +189,7 @@ and marketing domains.
 - Benchmarking spanned dual T4 and A100 80GB GPUs, 4-bit vs. 6-bit
   quantization.
 - Tech stack overall: Python, FastAPI, Docker, Azure, OpenAI API/function
-  calling, Pinecone, Supabase, LLaMA 3.1/3.2, BERT, SetFit, GPT-4/GPT-3.5,
+  calling, Pinecone, Supabase, LLaMA 3.0 (internship), LLaMA 3.1 (full-time), BERT, SetFit, GPT-4/GPT-3.5,
   ONNX Runtime, ObjectBox (HNSW), Llama.cpp, Qwen2.5, Phi-3 Mini, Unity,
   Azure TTS, Oculus Lip Sync, Ready Player Me SDK, Node.js, ASP.NET/C#,
   SQLite.
@@ -216,9 +216,9 @@ function-calling evaluation.
 - Built a production RAG pipeline for insurance/medical documents using OpenAI embeddings, Pinecone retrieval, and Supabase persistence.
 - Designed agentic Chain-of-Thought/ReAct workflows with specialized sub-agents to cut hallucinations in advisory use cases.
 - Built a medical reasoning Q&A system on 7,000 USMLE questions, storing CoT traces in Pinecone/SQLite for retrieval-augmented inference.
-- Engineered a fully offline Android RAG pipeline (ONNX Runtime, ObjectBox HNSW, Llama.cpp), reaching 19.6 tok/sec on a 6GB-RAM device.
-- Benchmarked LLaMA, Phi-3, GPT-4, and GPT-3.5 across T4/A100 GPUs, comparing 4-bit vs. 6-bit quantization for model selection.
-- Engineered a multi-tier SMS intelligence pipeline (LLaMA 3.1, BERT, SetFit, GPT-4), processing more than 100,000 SMS messages across experimentation and production use.
+- Engineered a fully offline Android RAG pipeline with LLaMA 3.1 (ONNX Runtime, ObjectBox HNSW, Llama.cpp), reaching 19.6 tok/sec on a 6GB-RAM device during the full-time role.
+- Benchmarked LLaMA 3.1, Phi-3, GPT-4, and GPT-3.5 across T4/A100 GPUs, comparing 4-bit vs. 6-bit quantization for model selection during the full-time role.
+- During the internship, engineered a multi-tier SMS intelligence pipeline (LLaMA 3.0, BERT, SetFit, GPT-4), processing more than 100,000 SMS messages across experimentation and production use.
 - Fine-tuned BERT/SetFit on noisy real-world SMS text, building training and evaluation pipelines to improve robustness.
 - Shipped a real-time Unity avatar system with Azure TTS and Oculus Lip Sync, patching a third-party SDK for runtime lip-sync.
 - Built a dual-avatar dialogue engine with synchronized audio, lip sync, and dynamic camera control between speakers.
@@ -228,4 +228,4 @@ function-calling evaluation.
 - Designed Supabase-backed conversation persistence to support context continuity in multi-turn LLM dialogue systems.
 - Automated LLM pipelines turning structured questionnaires into brand guidelines and campaign drafts.
 - Built predictive ML pipelines analyzing multimodal social data (text, image, video) for brand-intelligence signals.
-- Evaluated open-source LLMs (LLaMA, Qwen) as proprietary-API alternatives for classification and function-calling reliability.
+- Evaluated open-source LLMs (LLaMA 3.1, Qwen) as proprietary-API alternatives for classification and function-calling reliability during the full-time role.

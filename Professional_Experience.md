@@ -113,7 +113,7 @@ Developed modular LLM pipelines that automatically generate structured outputs s
 ## NLP, SMS Intelligence, and Predictive Machine Learning
 
 ### Built a Multi-Layer SMS Intelligence Pipeline
-Developed a production SMS intelligence system that converts unstructured SMS messages into structured financial insights. Designed a multi-tier pipeline using LLaMA 3.1, BERT, SetFit, and GPT-4 models to perform binary classification, hierarchical category classification, and entity extraction. Processed more than 100,000 SMS messages across experimentation and production use.
+Developed a production SMS intelligence system during the internship that converts unstructured SMS messages into structured financial insights. Designed a multi-tier pipeline using LLaMA 3.0, BERT, SetFit, and GPT-4 models to perform binary classification, hierarchical category classification, and entity extraction. Processed more than 100,000 SMS messages across experimentation and production use.
 
 ### Fine-Tuned Transformer Models for Noisy Real-World Data
 Fine-tuned BERT and SetFit models for SMS classification tasks involving noisy, real-world data containing informal language, abbreviations, and mixed formatting. Implemented feature engineering, training pipelines, and evaluation workflows to improve classification accuracy and robustness across different message categories.
@@ -126,10 +126,10 @@ Designed machine learning pipelines capable of analyzing social media data inclu
 ## Edge AI and On-Device LLM Systems
 
 ### Researched and Implemented Fully Offline RAG Systems on Android
-Designed and implemented a complete on-device RAG architecture for Android that performs document parsing, embedding generation, vector search, and language model inference entirely offline. Used ONNX Runtime to run the all-MiniLM embedding model locally, ObjectBox with HNSW indexing for vector storage, and Llama.cpp to run small language models such as LLaMA 3.2 for response generation.
+Designed and implemented a complete on-device RAG architecture for Android that performs document parsing, embedding generation, vector search, and language model inference entirely offline. Used ONNX Runtime to run the all-MiniLM embedding model locally, ObjectBox with HNSW indexing for vector storage, and Llama.cpp to run small language models such as LLaMA 3.1 for response generation during the full-time engineer role.
 
 ### Benchmarked On-Device LLM Inference Across Mobile Hardware
-Conducted extensive benchmarking experiments to evaluate the feasibility of on-device AI inference. Tested models including Qwen2.5, Phi-3 Mini, and LLaMA variants across ONNX Runtime and Llama.cpp environments. Achieved approximately 19.6 tokens per second on a 6GB RAM Android device using a 0.43GB quantized model, demonstrating practical feasibility for offline conversational AI.
+Conducted extensive benchmarking experiments during the full-time engineer role to evaluate the feasibility of on-device AI inference. Tested models including Qwen2.5, Phi-3 Mini, and LLaMA 3.1 across ONNX Runtime and Llama.cpp environments. Achieved approximately 19.6 tokens per second on a 6GB RAM Android device using a 0.43GB quantized model, demonstrating practical feasibility for offline conversational AI.
 
 ### Investigated Retrieval and Hallucination Challenges in Small Language Models
 Performed research into limitations of small language models operating under mobile hardware constraints. Identified failure modes related to context length limitations, hallucination patterns, and retrieval errors. Proposed improvements including metadata filtering, better chunk preprocessing, and optimized retrieval strategies to improve answer reliability in edge environments.
@@ -171,10 +171,10 @@ Modernized backend infrastructure by migrating eight REST API endpoints from Nod
 ## LLM Evaluation, Benchmarking, and Applied Research
 
 ### Evaluated Open Source LLMs as Alternatives to Proprietary APIs
-Conducted evaluation studies on open source models such as LLaMA, Qwen, and other emerging models as potential replacements for proprietary APIs. Tested their ability to perform classification, function calling, and generation tasks under complex routing conditions in multi-agent systems.
+Conducted evaluation studies during the full-time engineer role on open source models such as LLaMA 3.1, Qwen, and other emerging models as potential replacements for proprietary APIs. Tested their ability to perform classification, function calling, and generation tasks under complex routing conditions in multi-agent systems.
 
 ### Benchmarked Model Performance Across Hardware and Quantization Levels
-Performed benchmarking experiments comparing LLaMA, Phi-3, GPT-4, and GPT-3.5 across GPU hardware including dual T4 instances and A100 80GB accelerators. Analyzed trade-offs between 4-bit and 6-bit quantization strategies to balance model quality, inference latency, and memory usage.
+Performed benchmarking experiments during the full-time engineer role comparing LLaMA 3.1, Phi-3, GPT-4, and GPT-3.5 across GPU hardware including dual T4 instances and A100 80GB accelerators. Analyzed trade-offs between 4-bit and 6-bit quantization strategies to balance model quality, inference latency, and memory usage.
 
 ### Investigated Failure Modes in Function Calling and Agent Routing
 Tested open source models for function calling reliability within multi-agent pipelines. Identified failure patterns including premature tool invocation, hallucinated tool outputs, and empty string responses. Documented these behaviors to guide future model selection and system design decisions.
@@ -191,7 +191,7 @@ Tested open source models for function calling reliability within multi-agent pi
 
 • Developed a large-scale medical reasoning Q&A system using 7,000 USMLE questions, generating structured reasoning traces through dynamic few-shot prompting and storing them in a Pinecone + SQLite retrieval system to enable retrieval-augmented reasoning during inference.
 
-• Built a multi-layer SMS intelligence pipeline converting more than 100,000 SMS messages into structured financial insights using LLaMA 3.1, BERT, SetFit, and GPT-4, with binary classifiers, hierarchical label trees, and LLM-based entity extraction.
+• During the internship, built a multi-layer SMS intelligence pipeline converting more than 100,000 SMS messages into structured financial insights using LLaMA 3.0, BERT, SetFit, and GPT-4, with binary classifiers, hierarchical label trees, and LLM-based entity extraction.
 
 • Fine-tuned transformer models including BERT and SetFit for classification and entity extraction on noisy real-world datasets, designing training pipelines and evaluation workflows to improve robustness across unstructured SMS data.
 
@@ -205,7 +205,7 @@ Tested open source models for function calling reliability within multi-agent pi
 
 • Designed and implemented a fully offline Retrieval Augmented Generation system for Android using ONNX Runtime for embedding inference, ObjectBox HNSW vector search for retrieval, and Llama.cpp for on-device language model inference.
 
-• Conducted benchmarking experiments on on-device AI inference across models including Qwen2.5, Phi-3 Mini, and LLaMA variants using ONNX Runtime and Llama.cpp, achieving ~19.6 tokens/sec on a 6GB RAM Android device using a 0.43GB quantized model.
+• During the full-time engineer role, conducted benchmarking experiments on on-device AI inference across models including Qwen2.5, Phi-3 Mini, and LLaMA 3.1 using ONNX Runtime and Llama.cpp, achieving ~19.6 tokens/sec on a 6GB RAM Android device using a 0.43GB quantized model.
 
 • Investigated retrieval accuracy and hallucination patterns in small language models operating under mobile hardware constraints and proposed improvements including metadata filtering and optimized chunk preprocessing strategies.
 
