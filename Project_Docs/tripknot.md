@@ -41,7 +41,7 @@ GitHub Actions CI (test + Docker build) and CD (automatic staging deploy, manual
 - Mobile app: ~27,000 LOC, Expo/React Native, EAS Build CI for Android + iOS store submission.
 - Admin console: ~17,000 LOC, Next.js 16 / React 19.
 - One purpose-specific scoring microservice, plus ETL and image-processing supporting tools, beyond the three main repositories.
-- Development has been continuous since April 2026.
+- Development has been continuous since March 2026.
 
 ## Key Highlights
 - Co-built the AI itinerary engine: multi-provider LLM routing (Gemini, Groq fallback) plus a custom place-scoring/diversity algorithm for budget-aware itineraries.

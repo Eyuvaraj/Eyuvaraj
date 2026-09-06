@@ -1,5 +1,5 @@
 # Founding Engineer | Aneeras LLP  
-Apr 2026 – Present • Pondicherry, India · Hybrid
+Mar 2026 – Present • Pondicherry, India · Hybrid
 
 *One of five founding engineers building the TripKnot product.*
 
