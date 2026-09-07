@@ -79,10 +79,10 @@ Set up GitHub Actions CI (test plus Docker build) and CD (automatic staging depl
 
 ---
 
-# AI/ML Engineer | YUVABE  
+# AI Engineer | YUVABE  
 Jul 2024 – Aug 2025 • Auroville, Tamil Nadu
 
-*Previously AI/ML Intern at YUVABE, Jan 2024 – Jun 2024.*
+*Previously AI Engineer Intern at YUVABE, Jan 2024 – Jun 2024.*
 
 ## High-Impact Architecture and Platform Work
 
