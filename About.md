@@ -4,9 +4,11 @@ I am an AI/ML Engineer focused on building applied AI systems, dependable backen
 
 ## Professional Focus
 
-At YUVABE, I progressed from AI/ML Intern to AI/ML Engineer and worked across production RAG platforms, multi-agent systems, document intelligence, on-device AI experiments, conversational avatars, and backend API development. My experience includes Python and FastAPI services, Dockerized deployments, Azure and GCP infrastructure, vector retrieval, and model-routing decisions.
+At YUVABE, I progressed from AI Engineer Intern to AI Engineer and worked across production RAG platforms, multi-agent systems, document intelligence, on-device AI experiments, conversational avatars, and backend API development. My experience includes Python and FastAPI services, Dockerized deployments, Azure and GCP infrastructure, vector retrieval, and model-routing decisions.
 
-I am currently one of five founding engineers at Aneeras LLP, building the TripKnot product. The work spans an LLM-driven travel-itinerary engine, KYC verification, a Next.js administration console, an Expo/React Native mobile app, data-ingestion tooling, and production deployment infrastructure. I work closely with Keerthana on shared product areas and document collaboration explicitly when presenting individual contributions.
+I am currently a Founding Engineer at [Aneeras LLP](https://aneeras.com/), a product-first startup founded in 2026 around [TripKnot](https://tripknot.in/) as its core idea and first product. I am one of five founding team members and one of three full-stack engineers, alongside one UI/UX developer and one frontend developer.
+
+We built TripKnot from the ground up and released its connected data platform, backend, traveler mobile app, business portal, admin console, and public website within five months. My own work spans the AI itinerary engine, ranking and personalization, backend and admin systems, React Native features, data tooling, deployment infrastructure, and limited support for an identity-verification workflow led elsewhere within the founding team.
 
 ## Engineering Approach
 
