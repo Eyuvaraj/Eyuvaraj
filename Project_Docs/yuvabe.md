@@ -7,7 +7,7 @@
 - **AI/ML Intern** — Jan 2024 – Jun 2024
 
 ## Overview
-Built and shipped production AI systems at Yuvabe spanning multi-agent LLM
+I built and shipped production AI systems spanning multi-agent LLM
 platforms, RAG pipelines, on-device/edge AI, SMS/NLP intelligence, and
 conversational avatar systems — full backend ownership (FastAPI, Docker,
 Azure) plus applied ML/LLM engineering across healthcare, finance, education,

@@ -7,7 +7,7 @@
 - Awarded a **₹25,000 cash prize**.
 - Project repository: [LLM-Hackathon-IITM](https://github.com/Eyuvaraj/LLM-Hackathon-IITM).
 
-🏆 **5th Place — goboxd (Paradox 2026, IIT Madras)**
+🏆 **5th Place — Code-Execution Sandbox (Paradox 2026, IIT Madras)**
 
 - Built a Go HTTP service that compiles and runs untrusted code in per-request `nsjail` sandboxes.
-- Competed across **three stages** against **50+ teams** and ranked **5th in the final stage**; the project is available as a [GitHub fork](https://github.com/Eyuvaraj/goboxd).
+- Competed across **three stages** against **50+ teams** and ranked **5th in the final stage**; the open-source project is available through my GitHub profile.

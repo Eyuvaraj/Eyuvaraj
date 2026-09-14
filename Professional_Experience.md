@@ -10,29 +10,29 @@
 
 #### Company & Product Overview
 
-[Aneeras LLP](https://aneeras.com/) is a product-first technology startup founded in 2026 around TripKnot as its core idea and first product. Aneeras focuses on building practical digital products around real-world experiences, with TripKnot establishing the company's initial direction in travel technology.
+The company is a product-first technology startup founded in 2026 around an AI-assisted travel platform as its core idea and first product. It focuses on building practical digital products around real-world experiences, with travel technology establishing its initial direction.
 
-[TripKnot](https://tripknot.in/) is an AI-assisted travel platform that brings personalized day-by-day itinerary planning, destination and hidden-gem discovery, curated escapes, map-based exploration, and group travel into one connected experience. Its broader product ecosystem includes the traveler mobile application, a partner-facing business portal, an internal admin console, the public website, backend services, and the underlying destination-data platform.
+The platform brings personalized day-by-day itinerary planning, destination and hidden-gem discovery, curated escapes, map-based exploration, and group travel into one connected experience. Its broader product ecosystem includes the traveler mobile application, a partner-facing business portal, an internal admin console, the public website, backend services, and the underlying destination-data platform.
 
 #### Founding Team & Delivery Context
 
-I am one of five founding team members and one of three full-stack engineers. The founding team consists of three full-stack engineers, one UI/UX developer, and one frontend developer. We formed Aneeras around the TripKnot idea, coordinated product and engineering decisions closely, and built the product from the ground up rather than inheriting an existing platform.
+I am one of five founding team members and one of three full-stack engineers. The founding team consists of three full-stack engineers, one UI/UX developer, and one frontend developer. We formed the company around the travel-platform idea, coordinated product and engineering decisions closely, and built the product from the ground up rather than inheriting an existing platform.
 
-Within five months of beginning the build, we took TripKnot from the initial idea and raw destination data to a public production release. The team delivered the data foundation, backend, traveler mobile application, business portal, admin console, public website, and the supporting deployment and operational systems required to run them.
+Within five months of beginning the build, we took the platform from the initial idea and raw destination data to a public production release. The team delivered the data foundation, backend, traveler mobile application, business portal, admin console, public website, and the supporting deployment and operational systems required to run them.
 
 #### Role & Product Context
 
-As a Founding AI Engineer, I work closely with the other members of the founding team across product definition, architecture, implementation, release, and iteration. My own engineering work spans AI-assisted itinerary generation, ranking and personalization, backend and admin systems, React Native mobile features, data pipelines, cloud deployment, observability, engineering infrastructure, and limited support for identity-verification work. The product is a shared founding-team effort; the details below describe my own work and clearly identify areas where responsibility was shared.
+As a Founding AI Engineer in a small founding team, I work closely with the other members across product definition, architecture, implementation, release, and iteration while remaining hands-on as one of three full-stack engineers. My own engineering work spans AI-assisted itinerary generation, ranking and personalization, backend and admin systems, React Native mobile features, data pipelines, cloud deployment, observability, engineering infrastructure, and limited support for identity-verification work. The product is a shared founding-team effort; the details below describe my own work and clearly identify areas where responsibility was shared.
 
 #### AI Itinerary Generation Engine
 
-- **Multi-Provider AI Itinerary Engine:** Within the founding team, I helped build TripKnot's core multi-provider LLM itinerary engine. I configured Gemini as the primary provider with a Pydantic-derived JSON schema and strict response validation. I configured Groq/Llama-3 as the automatic fallback, passing the schema directly in its prompt before downstream normalization, and instrumented token cost and latency for every generation.
+- **Multi-Provider AI Itinerary Engine:** Within the founding team, I helped build the platform's core multi-provider LLM itinerary engine. I configured Gemini as the primary provider with a Pydantic-derived JSON schema and strict response validation. I configured Groq/Llama-3 as the automatic fallback, passing the schema directly in its prompt before downstream normalization, and instrumented token cost and latency for every generation.
 - **Place-Scoring & Diversity Algorithm:** I designed a place-scoring and diversity algorithm that blends log-scaled popularity with rating counts and landmark, trending, and hidden-gem signals. I added per-request seed jitter to prevent repeated requests from producing identical itineraries, an anchor mechanism that guarantees top landmarks appear, round-robin category-diversity filling, and budget-tier filtering with graceful relaxation when strict filters return too few results.
 - **Proof of Concept:** I built the Streamlit proof of concept that preceded and informed the production rewrite, including geo-clustering, greedy traveling-salesperson-problem (TSP) day ordering, and LLM-based scheduling.
 
 #### Trust, Safety & Identity Verification
 
-- **KYC/Aadhaar Implementation Support:** I provided limited engineering support for TripKnot's Aadhaar/KYC identity-verification workflow. The system was led and built by another founding engineer and covered strangers trips in which participants may join people they do not already know, along with the related trip and user data models, backend validation, traveler-facing flow, and admin review interface.
+- **KYC/Aadhaar Implementation Support:** I provided limited engineering support for the platform's Aadhaar/KYC identity-verification workflow. The system was led and built by another founding engineer and covered strangers trips in which participants may join people they do not already know, along with the related trip and user data models, backend validation, traveler-facing flow, and admin review interface.
 - **Storage Authentication & Token Handling:** I resolved a production Google Cloud Storage upload-authentication problem by switching to Firebase service-account-key authentication after Uniform Bucket-Level Access caused the earlier `make_public` approach to fail. I also built profile-image upload handling and user-token verification endpoints.
 
 #### Admin Backend & Console
@@ -78,8 +78,8 @@ As a Founding AI Engineer, I work closely with the other members of the founding
 
 #### Key Highlights
 
-- Helped take TripKnot from its founding idea and raw destination data to a complete production ecosystem within five months, including the backend, traveler mobile app, business portal, admin console, and public website.
-- Developed TripKnot's multi-provider itinerary workflow with Gemini schema validation, Groq/Llama fallback handling, and per-generation token-cost and latency tracking.
+- Helped take the travel platform from its founding idea and raw destination data to a complete production ecosystem within five months, including the backend, traveler mobile app, business portal, admin console, and public website.
+- Developed the platform's multi-provider itinerary workflow with Gemini schema validation, Groq/Llama fallback handling, and per-generation token-cost and latency tracking.
 - Designed place-scoring and diversity logic using popularity, ratings, landmark and hidden-gem signals, seed jitter, category balancing, landmark anchors, and budget-aware filtering.
 - Designed the standalone ranking service that calculates configurable, time-decayed trending and multi-factor popularity scores across places, destinations, and states.
 - Built the full-stack admin platform for destination data, CSV operations, analytics, host verification, and audit-logged trip moderation.
@@ -94,13 +94,13 @@ As a Founding AI Engineer, I work closely with the other members of the founding
 
 ### Organization Context
 
-YUVABE is an Auroville-based organization operating under the Auroville Foundation. It follows a Work, Serve, Evolve model and combines higher-order skilling with multidisciplinary project delivery. [Yuvabe Studios](https://www.yuvabestudios.com/) brings together AI, engineering, design, product, and marketing capabilities for client engagements. I progressed from a six-month AI Engineer internship into a full-time AI Engineer role without a gap between the two positions.
+This Auroville-based organization operates under the Auroville Foundation. It follows a Work, Serve, Evolve model and combines higher-order skilling with multidisciplinary project delivery. Its studio brings together AI, engineering, design, product, and marketing capabilities for client engagements. I progressed from a six-month AI Engineer internship into a full-time AI Engineer role without a gap between the two positions.
 
 ### Client Context: [TVAM](https://www.tvam.co/)
 
-TVAM was already an established Bengaluru-based health-and-fintech company before it became a YUVABE client. Its health-and-wealth platform brought together health insurance, doctor consultations and telemedicine, AI-assisted health experiences, UPI and bill payments, loans, investments, banking-related services, and personal-finance features. TVAM's public materials describe operations across 22 Indian states and a community or platform population of more than 200,000 people; the platform population during my work was documented as more than 100,000 users. [Yuvabe Studios' TVAM case study](https://www.yuvabestudios.com/case-studies/tvam) dates the engagement to 2024 and documents RAG, vector search, cloud-native AI, and product work for the iOS and Android platform.
+The client was already an established Bengaluru-based health-and-fintech company before the engagement began. Its health-and-wealth platform brought together health insurance, doctor consultations and telemedicine, AI-assisted health experiences, UPI and bill payments, loans, investments, banking-related services, and personal-finance features. Public materials describe operations across 22 Indian states and a community or platform population of more than 200,000 people; the platform population during my work was documented as more than 100,000 users. The engagement began in 2024 and included RAG, vector search, cloud-native AI, and product work for the iOS and Android platform.
 
-I was involved from the beginning of TVAM's client engagement with YUVABE and worked predominantly on this client across both my internship and full-time role. Unlike a greenfield product built entirely at YUVABE, TVAM already had a substantial company, product, services, users, and partner ecosystem. My scope was TVAM's AI-related R&D and engineering: I researched approaches, built and evaluated prototypes, developed AI and backend services, and deployed selected systems for the client. Other YUVABE teams worked on areas such as brand, UI/UX, and broader product delivery. The specific work recorded below, including the SMS/NLP systems, edge RAG research, Minions evaluation, avatar pipelines, and associated AI experiments, was performed for TVAM as part of this client engagement.
+I was involved from the beginning of this client engagement and worked predominantly on it across both my internship and full-time role. Unlike a greenfield product built entirely by the delivery organization, the client already had a substantial company, product, services, users, and partner ecosystem. My scope was the client's AI-related R&D and engineering: I researched approaches, built and evaluated prototypes, developed AI and backend services, and deployed selected systems. Other teams worked on areas such as brand, UI/UX, and broader product delivery. The specific work recorded below, including the SMS/NLP systems, edge RAG research, distributed edge-and-cloud evaluation, avatar pipelines, and associated AI experiments, was performed as part of this engagement.
 
 ### AI Engineer
 
@@ -110,13 +110,13 @@ I was involved from the beginning of TVAM's client engagement with YUVABE and wo
 
 #### Role Overview
 
-As a full-time AI Engineer, my primary operational focus was TVAM's AI/ML architecture and R&D. I architected, built, evaluated, and deployed generative-AI platforms, multi-agent microservice networks, NLP systems, edge language-model pipelines, on-device document intelligence, conversational 3D avatars, and supporting backend infrastructure for the client. My work covered the development lifecycle from low-level C++ and Python R&D and model fine-tuning to FastAPI microservices, Azure and GCP deployment, and native Android integration. I also mentored incoming YUVABE AI interns.
+As a full-time AI Engineer, my primary operational focus was the client's AI/ML architecture and R&D. I architected, built, evaluated, and deployed generative-AI platforms, multi-agent microservice networks, NLP systems, edge language-model pipelines, on-device document intelligence, conversational 3D avatars, and supporting backend infrastructure. My work covered the development lifecycle from low-level C++ and Python R&D and model fine-tuning to FastAPI microservices, Azure and GCP deployment, and native Android integration. I also mentored incoming AI interns.
 
 #### 1. Multi-Agent Production AI Platform & Agentic Architecture
 
 ##### Production Multi-Agent Platform Architecture
 
-- **System Design:** I architected and deployed a multi-agent AI system for TVAM's platform, which served more than 100,000 users across healthcare, health insurance, wealth management, and personal financial management during this work.
+- **System Design:** I architected and deployed a multi-agent AI system for a platform serving more than 100,000 users across healthcare, health insurance, wealth management, and personal financial management during this work.
 - **Dynamic Agent Routing:** I designed a routing layer using OpenAI function calling and domain-specific intermediary router agents. It analyzes each incoming query, dialogue state, and intent before directing the message to a specialized sub-agent:
   - **Health Advisor:** Handles medical symptoms, triage guidance, lifestyle wellness, and preliminary advice.
   - **Policy Advisor:** Analyzes health-insurance terms, coverage limits, riders, and claim rules.
@@ -138,7 +138,7 @@ As a full-time AI Engineer, my primary operational focus was TVAM's AI/ML archit
 
 ##### Four-Tier SMS Processing Hierarchy
 
-I designed and built an end-to-end SMS intelligence pipeline for TVAM's AI-Powered Decision Board. Across experimentation and product work, the pipeline processed datasets ranging from more than 15,000 to more than 100,000 unstructured SMS messages and converted noisy transactional text into structured, queryable financial data through four tiers:
+I designed and built an end-to-end SMS intelligence pipeline for an AI-powered decision board. Across experimentation and product work, the pipeline processed datasets ranging from more than 15,000 to more than 100,000 unstructured SMS messages and converted noisy transactional text into structured, queryable financial data through four tiers:
 
 1. **Preprocessing & Binary Classification:** I cleaned raw SMS logs by filtering exact duplicates, non-English messages, promotional spam, and embedded URLs, then classified messages as Transaction or Offer.
 2. **LLM Quality-Filtering Agent:** I implemented an LLM-based agent that scores usefulness from 1 to 5. It drops ratings 1 and 2, representing promotional noise and junk notifications, while retaining ratings 3, 4, and 5 for downstream financial analysis.
@@ -162,7 +162,7 @@ I designed and built an end-to-end SMS intelligence pipeline for TVAM's AI-Power
 
 ##### Specialist Doctor Routing
 
-- **Business Workflow:** After a user interacts with TVAM's AI assistant, Tvamev, the system evaluates whether specialist medical intervention may be needed. When appropriate, it selects a medical specialty and triggers an in-app consultation popup through function calling.
+- **Business Workflow:** After a user interacts with the platform's AI assistant, the system evaluates whether specialist medical intervention may be needed. When appropriate, it selects a medical specialty and triggers an in-app consultation popup through function calling.
 - **Baseline Implementation:** I worked with the baseline OpenAI function-calling workflow, which uses conversation history to select the appropriate specialist and raise the popup flag.
 
 ##### Open-Source Replacement Experiments & Failure Analysis
@@ -348,10 +348,10 @@ I surveyed open-source text-to-video models on Hugging Face for possible enterpr
 
 ##### Technical Enablement & Intern Mentoring
 
-- **Technical Evaluation:** I prepared two complete Python programming question papers and technical problem sets for incoming YUVABE AI interns.
+- **Technical Evaluation:** I prepared two complete Python programming question papers and technical problem sets for incoming AI interns.
 - **Onboarding & Mentoring:** I conducted technical onboarding, code reviews, and weekly mentoring sessions covering Python, FastAPI, Docker, and machine-learning fundamentals.
 
-#### 10. Additional TVAM AI Pipelines
+#### 10. Additional Client AI Pipelines
 
 - **Automated Knowledge Generation:** I built modular LLM pipelines that turn structured questionnaires into outputs such as brand guidelines, identity documents, and marketing-campaign drafts. I designed orchestration flows that transform raw answers into reusable knowledge artifacts and repeatable content-generation pipelines.
 - **Multimodal Brand Intelligence:** I designed predictive ML pipelines for social-media text, image, and video data. I used NLP, computer vision, and clustering to derive sentiment trends, brand-perception signals, campaign indicators, and other insights for marketing and product teams.
@@ -373,7 +373,7 @@ I surveyed open-source text-to-video models on Hugging Face for possible enterpr
 
 #### Key Highlights
 
-- Architected TVAM's multi-agent AI platform for a product serving more than 100,000 users, routing health, insurance, doctor-consultation, and document requests to specialized agents while preserving context across handoffs.
+- Architected a multi-agent AI platform for a product serving more than 100,000 users, routing health, insurance, doctor-consultation, and document requests to specialized agents while preserving context across handoffs.
 - Built modular FastAPI microservices with Docker, Supabase/PostgreSQL, Pinecone, and Google Cloud Storage, deploying scalable AI workloads across Azure and Google Cloud Platform.
 - Designed a four-tier SMS intelligence pipeline that processed datasets ranging from more than 15,000 to more than 100,000 messages for classification, quality filtering, category discovery, and financial-entity extraction.
 - Evaluated and fine-tuned BERT, SetFit, Phi-3, LLaMA, Qwen, and other models across classification, generation, routing, quantization, and function-calling workloads.
@@ -394,27 +394,27 @@ I surveyed open-source text-to-video models on Hugging Face for possible enterpr
 
 #### Internship Overview
 
-During my six-month AI Engineering internship at YUVABE, I designed, built, benchmarked, and deployed generative-AI pipelines, retrieval-augmented generation systems, multi-agent microservices, and NLP classification models for TVAM. Most of my internship centered on this client, whose platform served more than 100,000 users across 22 Indian states during the period. My major systems included a medical-reasoning engine over 7,000 USMLE questions, a health-insurance policy-advisor RAG system deployed to Azure, fine-tuned Phi-3 and SetFit models, and quantized-model benchmarks on T4 and A100 GPUs.
+During my six-month AI Engineering internship, I designed, built, benchmarked, and deployed generative-AI pipelines, retrieval-augmented generation systems, multi-agent microservices, and NLP classification models for the organization's primary health-and-fintech client. Most of my internship centered on this engagement, whose platform served more than 100,000 users across 22 Indian states during the period. My major systems included a medical-reasoning engine over 7,000 USMLE questions, a health-insurance policy-advisor RAG system deployed to Azure, fine-tuned Phi-3 and SetFit models, and quantized-model benchmarks on T4 and A100 GPUs.
 
-#### 1. TVAM Health Assistant & Document-Analysis Microservice
+#### 1. Health Assistant & Document-Analysis Microservice
 
 - **Period:** February 2024 – June 2024
 - **Stack:** Python, OpenAI Chat API with GPT-3.5 and GPT-4, OpenAI Assistant API, FastAPI, Streamlit, Docker, Google Cloud Storage, GCP/Cloud Run
 
-- **Conversational Health Advisor:** I developed TVAM's core Health Advisor chatbot with OpenAI chat models for real-time health questions.
+- **Conversational Health Advisor:** I developed the platform's core Health Advisor chatbot with OpenAI chat models for real-time health questions.
 - **Document Upload & Analysis:** I integrated the OpenAI Assistant API's file-handling capabilities into the backend so users could upload medical reports and other health documents for analysis, summarization, and direct question answering.
 - **Cloud Storage & Persistence:** I used Google Cloud Storage buckets to persist chat-session history, uploaded files, and generated artifacts securely.
 - **Microservice APIs:** I designed and built FastAPI REST microservices with structured request and response schemas for conversation and file-processing endpoints.
 - **Prototype Interface:** I built a Streamlit frontend for internal testing, prompt evaluation, and demonstrations to client stakeholders.
 - **Containerization & Deployment:** I learned and applied Docker, wrote optimized Dockerfiles for the FastAPI and Streamlit services, built their images, and deployed the production application to Google Cloud Run.
-- **Prompt & Flow Refinement:** In June, I updated system prompts so the assistant could redirect users to TVAM's mobile application and support doctor-appointment booking flows.
+- **Prompt & Flow Refinement:** In June, I updated system prompts so the assistant could redirect users to the client mobile application and support doctor-appointment booking flows.
 
-#### 2. TVAM Policy Advisor & Health-Insurance RAG System
+#### 2. Policy Advisor & Health-Insurance RAG System
 
 - **Period:** April 2024 – May 2024
 - **Stack:** Python, OpenAI Chat API, OpenAI `text-embedding-3-small`, Pinecone, Supabase/PostgreSQL, FastAPI, Streamlit, Docker, Azure
 
-- **Insurance Knowledge Base:** I gathered, structured, and preprocessed TVAM health-insurance documents covering policy terms, limits, coverage rules, exclusions, and claim-submission procedures.
+- **Insurance Knowledge Base:** I gathered, structured, and preprocessed client health-insurance documents covering policy terms, limits, coverage rules, exclusions, and claim-submission procedures.
 - **Embedding & Indexing:** I split the policy material into chunks, converted them into 1,536-dimensional vectors with `text-embedding-3-small`, and indexed them in Pinecone.
 - **Semantic Retrieval:** I built the retrieval pipeline that embeds a user's query, searches Pinecone with cosine similarity, returns the highest-matching policy chunks, and assembles grounded context for LLM response generation.
 - **Personal Policy Analysis:** I integrated OpenAI Assistant API uploads so users could submit their own insurance documents for clause extraction, coverage comparison, and direct questions.
@@ -455,7 +455,7 @@ During my six-month AI Engineering internship at YUVABE, I designed, built, benc
 
 #### Key Highlights
 
-- Built TVAM's conversational Health Advisor and medical-document analysis APIs with OpenAI models, FastAPI, Streamlit, Docker, Google Cloud Storage, and Cloud Run.
+- Built a conversational Health Advisor and medical-document analysis APIs with OpenAI models, FastAPI, Streamlit, Docker, Google Cloud Storage, and Cloud Run.
 - Developed and deployed a health-insurance RAG system on Azure using OpenAI embeddings, Pinecone retrieval, Supabase conversation persistence, FastAPI, and Streamlit.
 - Built a medical-reasoning evaluation system over 7,000 USMLE questions using dynamic five-shot retrieval, Pinecone explanation embeddings, SQLite metadata, and five-way answer-option shuffling.
 - Benchmarked LLaMA 3, Phi-3, GPT-4, and GPT-3.5 classification performance and quantization tradeoffs across dual NVIDIA T4 and 80 GB A100 GPU environments.
