@@ -27,11 +27,15 @@ The backend totals—approximately 21,000 lines of application code, 185 endpoin
 ### AI itinerary generation engine (backend)
 The product's core differentiator. Multi-provider LLM routing: Gemini uses a Pydantic-derived JSON schema and response validation, while Groq/Llama-3 is the automatic fallback with the schema embedded in the prompt and downstream normalization. Token cost and latency are instrumented per generation. A hand-rolled place-scoring and diversity algorithm: log-scaled popularity blended with rating-count and landmark/trending/hidden-gem signals, per-request seed jitter (±12–18%) so repeated requests don't return identical results, an "anchor" mechanism guaranteeing top landmarks always appear, round-robin category-diversity fill, and budget-tier filtering with graceful relaxation when strict filters return too few results. Predecessor prototyping happened in a Streamlit proof-of-concept (geo-clustering + greedy TSP day-ordering + LLM-based scheduling) before the production rewrite.
 
+For model and prompt choices, I recorded outputs for the same itinerary inputs together with generation time, token use, and cost. I compared the responses by inspection rather than against a predefined pass threshold or numerical quality score. These records supported engineering choices, but they do not establish a measured improvement in itinerary quality.
+
+The location-aware discovery behavior, place-personalization logic, and structured itinerary generation belonged to one connected API. The mobile fix kept a manually selected city from being overwritten during background location updates.
+
 ### Trust & safety / identity verification (backend + admin)
-I provided limited engineering support for the Aadhaar/KYC identity-verification workflow, which was led and built by another founding engineer. The broader system includes a "strangers trip" flow for participants joining people they do not already know, trip and user data models, backend validation, a traveler-facing submission flow, and an admin review interface for approval or rejection. My direct production authentication work included resolving a Google Cloud Storage upload issue by switching to Firebase service-account-key authentication after a Uniform Bucket-Level Access/`make_public` failure, along with profile-image upload handling and user-token verification endpoints.
+Another founding engineer led the original Aadhaar/KYC identity-verification workflow. I helped build parts of it, then later made small updates across its backend, admin console, and traveler app. The broader system includes a "strangers trip" flow for participants joining people they do not already know, trip and user data models, backend validation, a traveler-facing submission flow, and an admin review interface for approval or rejection. My direct production authentication work included resolving a Google Cloud Storage upload issue by switching to Firebase service-account-key authentication after a Uniform Bucket-Level Access/`make_public` failure, along with profile-image upload handling and user-token verification endpoints.
 
 ### Admin backend + console (full-stack)
-CSV import/export for destinations and places, destination/place/state CRUD, an analytics dashboard with real visualizations, trip moderation including a two-step host-verification approval flow and a soft-cancel-with-audit-trail redesign (replacing hard deletes with status/reason/audit fields for compliance). Built full-stack — matching backend endpoints and admin frontend UI shipped together.
+CSV import/export for destinations and places, destination/place/state CRUD, an analytics dashboard with real visualizations, trip moderation, and a soft-cancel-with-audit-trail redesign (replacing hard deletes with status/reason/audit fields for compliance). Later made small changes to the host-approval flow across backend, admin console, and traveler app. Built the broader admin work full-stack — matching backend endpoints and admin frontend UI shipped together.
 
 ### Analytics & gamification (backend)
 Fire-and-forget event tracking that does not await completion in the user-facing request path, atomic counters, a trending/popularity recalculation job, public leaderboard endpoints, badges.
@@ -57,9 +61,9 @@ GitHub Actions CI (test + Docker build) and CD (automatic staging deploy, manual
 
 ## Key Highlights
 - Helped take the travel platform from its founding idea and raw destination data to a complete production ecosystem within five months, spanning the backend, traveler mobile app, business portal, admin console, and public website.
-- Developed the AI itinerary engine through multi-provider LLM routing with Gemini and Groq fallback plus custom place-scoring and diversity logic for budget-aware itineraries.
-- Built the admin console and backend endpoints for content moderation and analytics, including a two-step host-verification flow and an audit-logged cancellation system.
+- Developed itinerary and discovery logic within one API, combining location-aware place selection, category variety, budget filtering, Gemini schema validation, and Groq fallback.
+- Built the admin console and backend endpoints for content moderation and analytics, including an audit-logged cancellation system.
 - Designed a standalone scoring service computing trending/popularity rankings via time-decay, multi-factor models, tuned to stay stable from launch through scale.
-- Shipped mobile features spanning location-aware personalization, a region-browsable "Explore India" feature, and notification preferences, in React Native/Expo.
+- Shipped mobile features including a region-browsable "Explore India" feature and notification preferences in React Native/Expo; the location and manual-city behavior belonged to the itinerary and discovery API above.
 - Set up CI/CD and cloud deployment for the backend (GitHub Actions, Docker, Cloud Run, Workload Identity Federation), with Sentry monitoring across backend and mobile.
 - Built an image-quality vetting pipeline and ETL tooling to ingest and maintain destination content at scale.

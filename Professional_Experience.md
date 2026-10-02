@@ -27,18 +27,20 @@ As a Founding AI Engineer in a small founding team, I work closely with the othe
 #### AI Itinerary Generation Engine
 
 - **Multi-Provider AI Itinerary Engine:** Within the founding team, I helped build the platform's core multi-provider LLM itinerary engine. I configured Gemini as the primary provider with a Pydantic-derived JSON schema and strict response validation. I configured Groq/Llama-3 as the automatic fallback, passing the schema directly in its prompt before downstream normalization, and instrumented token cost and latency for every generation.
+- **Model and Prompt Comparison:** I recorded outputs for the same itinerary inputs across different models and prompts, alongside generation time, token use, and cost. I reviewed the responses by inspection and used those comparisons to guide choices. I did not set a pass threshold or calculate a formal quality-improvement score.
 - **Place-Scoring & Diversity Algorithm:** I designed a place-scoring and diversity algorithm that blends log-scaled popularity with rating counts and landmark, trending, and hidden-gem signals. I added per-request seed jitter to prevent repeated requests from producing identical itineraries, an anchor mechanism that guarantees top landmarks appear, round-robin category-diversity filling, and budget-tier filtering with graceful relaxation when strict filters return too few results.
+- **One Connected API:** The location-aware discovery, itinerary-personalization logic, and structured itinerary generation were parts of one API. The manually selected city behavior belonged to the same work.
 - **Proof of Concept:** I built the Streamlit proof of concept that preceded and informed the production rewrite, including geo-clustering, greedy traveling-salesperson-problem (TSP) day ordering, and LLM-based scheduling.
 
 #### Trust, Safety & Identity Verification
 
-- **KYC/Aadhaar Implementation Support:** I provided limited engineering support for the platform's Aadhaar/KYC identity-verification workflow. The system was led and built by another founding engineer and covered strangers trips in which participants may join people they do not already know, along with the related trip and user data models, backend validation, traveler-facing flow, and admin review interface.
+- **Identity-Verification Support:** Another founding engineer led the original Aadhaar/KYC workflow. I helped build parts of it, then later made small updates across its backend, admin console, and traveler app. The broader system covered trips in which participants may join people they do not already know, along with related trip and user data models, backend validation, traveler-facing steps, and admin review.
 - **Storage Authentication & Token Handling:** I resolved a production Google Cloud Storage upload-authentication problem by switching to Firebase service-account-key authentication after Uniform Bucket-Level Access caused the earlier `make_public` approach to fail. I also built profile-image upload handling and user-token verification endpoints.
 
 #### Admin Backend & Console
 
 - **Full-Stack Admin Platform:** I built the backend and admin console end to end for destination, place, and state CRUD operations; CSV import and export; and an analytics dashboard with real-time data visualizations.
-- **Trip Moderation & Compliance:** I implemented trip moderation with a two-step host-verification approval flow. I also redesigned trip cancellation from hard deletion to a soft-cancel model with status, reason, and audit fields, preserving a compliance-oriented audit trail.
+- **Trip Moderation & Compliance:** I implemented trip moderation and later made small backend and admin-console updates to the host-approval flow. I also redesigned trip cancellation from hard deletion to a soft-cancel model with status, reason, and audit fields, preserving a compliance-oriented audit trail.
 
 #### Analytics & Gamification
 
@@ -52,7 +54,7 @@ As a Founding AI Engineer in a small founding team, I work closely with the othe
 
 #### Mobile App Features
 
-- **Location-Aware Personalization:** I shipped a location and personalization pipeline for the Expo/React Native application so the home feed and discovery results respond to the user's actual location. I also fixed the distinction between a GPS-sourced city and a manually selected city so background location synchronization does not overwrite the user's explicit choice.
+- **Location-Aware Personalization:** Within that API, I shipped location-aware behavior for the Expo/React Native application so the home feed and discovery results respond to the user's actual location. I also fixed the distinction between a GPS-sourced city and a manually selected city so background location synchronization does not overwrite the user's explicit choice.
 - **Explore India & Discovery:** I built the Explore India states experience, including region-filterable browsing, state detail pages, hero content, and best-time-to-visit information. I also implemented notification preferences, search, and category filtering.
 - **Native Media Uploads:** I fixed Android and iOS photo-picker uploads by routing files through Expo's native upload API.
 
@@ -79,12 +81,11 @@ As a Founding AI Engineer in a small founding team, I work closely with the othe
 #### Key Highlights
 
 - Helped take the travel platform from its founding idea and raw destination data to a complete production ecosystem within five months, including the backend, traveler mobile app, business portal, admin console, and public website.
-- Developed the platform's multi-provider itinerary workflow with Gemini schema validation, Groq/Llama fallback handling, and per-generation token-cost and latency tracking.
-- Designed place-scoring and diversity logic using popularity, ratings, landmark and hidden-gem signals, seed jitter, category balancing, landmark anchors, and budget-aware filtering.
+- Developed location-aware itinerary and discovery logic within one API, combining place selection, category variety, budget filtering, Gemini schema validation, Groq/Llama fallback handling, and per-generation cost and latency tracking.
 - Designed the standalone ranking service that calculates configurable, time-decayed trending and multi-factor popularity scores across places, destinations, and states.
 - Built the full-stack admin platform for destination data, CSV operations, analytics, host verification, and audit-logged trip moderation.
 - Implemented asynchronous analytics, atomic counters, popularity recalculation, public leaderboards, and user badges without blocking user-facing requests.
-- Shipped location-aware discovery, manual-city preservation, Explore India, notification preferences, search, filtering, and native media uploads in React Native and Expo.
+- Shipped the Explore India state-browsing feature, notification preferences, search and filtering, and native media uploads in React Native and Expo; the manual-city preservation fix belonged to the itinerary and discovery API above.
 - Built authenticated destination-ingestion and asset-migration tooling with geocoding, duplicate detection, dry runs, WebP conversion, Google Cloud Storage, and audit logs.
 - Established Docker-based CI/CD on Google Cloud Run with automatic staging, gated production promotion, keyless Workload Identity Federation, and Sentry monitoring.
 
@@ -116,14 +117,14 @@ As a full-time AI Engineer, my primary operational focus was the client's AI/ML 
 
 ##### Production Multi-Agent Platform Architecture
 
-- **System Design:** I architected and deployed a multi-agent AI system for a platform serving more than 100,000 users across healthcare, health insurance, wealth management, and personal financial management during this work.
+- **System Design and Ownership:** I independently designed, built, and deployed the multi-agent AI system. It was integrated with an established client platform that had more than 100,000 total users during this work; that figure describes the client's whole platform, not measured use of my AI system.
 - **Dynamic Agent Routing:** I designed a routing layer using OpenAI function calling and domain-specific intermediary router agents. It analyzes each incoming query, dialogue state, and intent before directing the message to a specialized sub-agent:
   - **Health Advisor:** Handles medical symptoms, triage guidance, lifestyle wellness, and preliminary advice.
   - **Policy Advisor:** Analyzes health-insurance terms, coverage limits, riders, and claim rules.
-  - **Doctor Router:** Evaluates medical necessity and triggers specialist-consultation popups.
+  - **Doctor-Consultation Flow:** Uses function calling to decide when a health conversation should offer a doctor consultation and returns a flag that the existing mobile app can use to show its booking popup.
   - **File Processor:** Processes uploaded medical reports, lab tests, and policy PDFs.
-- **Context Continuity & State Synchronization:** I solved context loss during agent handoffs by designing shared session-state wrappers in FastAPI. The wrappers maintain conversational context, user-profile parameters, and file metadata across exchanges between sub-agents.
-- **Multimodal Voice & Text:** I unified text and voice interaction by integrating speech-to-text (STT) and text-to-speech (TTS) models through backend endpoints, enabling accessible voice-driven advisory interactions.
+- **Conversation Context Across Services:** When a conversation moved between specialized AI services, the next service could lose earlier messages, user preferences, and details about uploaded files. I added shared session handling in FastAPI so those details stayed available after the handoff.
+- **In-App RAG Chatbot Voice:** I integrated speech-to-text (STT) and text-to-speech (TTS) with the client's in-app RAG chatbot so users could ask questions by voice and hear its answers as well as use text. This was part of the client app, separate from my edge AI voice experiments.
 - **Reliability:** I used grounded retrieval, agent specialization, tool calling, context management, output handling, and documented model-failure analysis to make domain-aware responses more dependable and reduce hallucination risk.
 
 ##### Cloud-Native Microservices & Infrastructure
@@ -132,9 +133,11 @@ As a full-time AI Engineer, my primary operational focus was the client's AI/ML 
 - **API Development & Containerization:** I built high-throughput backend services with Python and FastAPI and containerized the microservices with Docker to create reproducible staging and production environments.
 - **Cloud Deployment:** I deployed containerized services to Azure and Google Cloud Platform, including Cloud Run, and configured horizontal autoscaling, health-check probes, and zero-downtime model deployments.
 - **Database & Session Storage:** I designed Supabase/PostgreSQL relational schemas for multi-turn conversation logs, agent-routing decisions, user preferences, and chat history. I used Google Cloud Storage (GCS) for secure document and generated-artifact retention.
-- **Reusable AI APIs:** I built secure REST APIs for document upload, processing, summarization, question answering, and metadata extraction so multiple web and mobile applications could integrate AI capabilities through standardized services without tight coupling.
+- **Reusable AI APIs:** I built secure REST APIs for document upload, processing, summarization, question answering, and metadata extraction so multiple web and mobile applications could integrate AI capabilities through standardized services without tight coupling. During my full-time role, this included medical-report and insurance-policy Q&A APIs with retrieval and Supabase/PostgreSQL conversation history, following my earlier internship health-document and policy-advisor work.
 
 #### 2. Enterprise NLP, SMS Intelligence & Transaction Analytics
+
+Most of the SMS work detailed below took place during my January–June 2024 internship. I continued some related work after moving into the full-time role, but this record does not separate those later tasks precisely.
 
 ##### Four-Tier SMS Processing Hierarchy
 
@@ -148,7 +151,7 @@ I designed and built an end-to-end SMS intelligence pipeline for an AI-powered d
 ##### Transformer Fine-Tuning & Model Benchmarking
 
 - **BERT:** I researched encoder-only transformer architectures and fine-tuned custom BERT models for multiclass classification over noisy financial data containing abbreviations and informal syntax.
-- **SetFit:** I fine-tuned SetFit sentence-transformer models for high-speed SMS classification, rating prediction, and Category 1 prediction, and deployed the resulting endpoints to Hugging Face Spaces for real-time inference.
+- **SetFit:** I prepared the labeled training data for SetFit from scratch, including labels for multiple levels of multiclass SMS classification. I fine-tuned SetFit sentence-transformer models for SMS classification, rating prediction, and Category 1 prediction, and deployed the resulting endpoints to Hugging Face Spaces for real-time inference.
 - **LLaMA 3.1 70B & Clustering:** I used LLaMA 3.1 70B for zero-shot discovery of new categories in financial logs and ran K-Means clustering over sentence embeddings to identify unlabeled transaction patterns.
 - **Benchmarking Matrix:** I measured classification accuracy, throughput, and latency across Phi-3, LLaMA 3-8B, LLaMA 3-70B in 4-bit and 6-bit quantization, GPT-4, and GPT-3.5 on two NVIDIA T4 GPUs with 16 GB VRAM each and one NVIDIA A100 GPU with 80 GB VRAM.
 
@@ -158,12 +161,13 @@ I designed and built an end-to-end SMS intelligence pipeline for an AI-powered d
 - **RAG-Based Entity Standardization:** I implemented retrieval-augmented normalization for inconsistent bank sender codes such as `JX-UNIONB`, `AX-NSESMS`, and `JK-UNIONB`, mapping them to standardized financial-institution entities.
 - **AI-Powered Decision Board:** I designed and prototyped a unified dashboard that aggregates processed SMS insights, categorizes spending behavior, tracks balance trends, and visualizes financial-health metrics for product managers and users.
 
-#### 3. Open-Source LLM Evaluation & Specialist Doctor Routing
+#### 3. Doctor-Consultation Chat API & Open-Source LLM Evaluation
 
-##### Specialist Doctor Routing
+##### Doctor-Consultation Chat API
 
-- **Business Workflow:** After a user interacts with the platform's AI assistant, the system evaluates whether specialist medical intervention may be needed. When appropriate, it selects a medical specialty and triggers an in-app consultation popup through function calling.
-- **Baseline Implementation:** I worked with the baseline OpenAI function-calling workflow, which uses conversation history to select the appropriate specialist and raise the popup flag.
+- **Business Workflow:** When a user discusses a health issue with the chatbot, the existing mobile app can offer a doctor-consultation booking popup. The appointment-booking feature and mobile popup already existed; my work connected the chatbot to that flow.
+- **Backend and LLM Integration:** I built a FastAPI endpoint within the chat API and used LLM function calling to decide whether to offer a doctor consultation. When the function was called, the API returned a Boolean flag for the mobile app to show its existing booking popup. I did not build the mobile interface or appointment-booking feature.
+- **Streamlit Prototype:** I built a Streamlit prototype to demonstrate the conversation, function-calling result, and consultation prompt, and worked with the mobile team on connecting the chatbot output to the existing booking flow.
 
 ##### Open-Source Replacement Experiments & Failure Analysis
 
@@ -189,6 +193,8 @@ I conducted R&D on running small language models and embedding models directly o
 4. **MLC LLM/Apache TVM:** I tested it for compiler-optimized mobile LLM execution.
 5. **MLLM:** I evaluated it as a lightweight mobile inference framework.
 6. **Picovoice:** I evaluated it for on-device voice processing.
+
+- **Edge AI Voice Work:** Separately from the in-app RAG chatbot, I used Android native text-to-speech and API-based speech-to-text with on-device language-model experiments.
 
 ##### Empirical Android Benchmarks
 
@@ -373,9 +379,9 @@ I surveyed open-source text-to-video models on Hugging Face for possible enterpr
 
 #### Key Highlights
 
-- Architected a multi-agent AI platform for a product serving more than 100,000 users, routing health, insurance, doctor-consultation, and document requests to specialized agents while preserving context across handoffs.
+- Independently designed, built, and deployed a multi-agent AI system for an established client platform with more than 100,000 total users, routing health, insurance, doctor-consultation, and document requests to specialized agents while preserving context across handoffs.
+- Built a FastAPI endpoint within the chatbot that used LLM function calling to flag when to offer a doctor consultation, demonstrated the flow in Streamlit, and helped connect it to the existing mobile booking feature.
 - Built modular FastAPI microservices with Docker, Supabase/PostgreSQL, Pinecone, and Google Cloud Storage, deploying scalable AI workloads across Azure and Google Cloud Platform.
-- Designed a four-tier SMS intelligence pipeline that processed datasets ranging from more than 15,000 to more than 100,000 messages for classification, quality filtering, category discovery, and financial-entity extraction.
 - Evaluated and fine-tuned BERT, SetFit, Phi-3, LLaMA, Qwen, and other models across classification, generation, routing, quantization, and function-calling workloads.
 - Built a fully offline Android RAG system using ONNX embeddings, ObjectBox HNSW retrieval, and Llama.cpp generation, with direct PDF and DOCX parsing on the device.
 - Benchmarked quantized mobile models and achieved 19.69 tokens per second with a 0.429 GB Qwen2.5 0.5B `q4_0` model on a 6 GB Android device.
@@ -441,7 +447,7 @@ During my six-month AI Engineering internship, I designed, built, benchmarked, a
 
 - **GPU Benchmarking:** I benchmarked LLaMA 3-8B, LLaMA 3-70B with 4-bit quantization, and LLaMA 3-70B with 6-bit quantization. I measured latency and token-generation speed on two 16 GB NVIDIA T4 GPUs and one 80 GB NVIDIA A100 GPU, and compared multiclass SMS-classification accuracy across Phi-3, LLaMA 3-70B, GPT-4, and GPT-3.5.
 - **Phi-3 Fine-Tuning:** I curated 200 real transaction and promotional SMS messages, labeled them with GPT-4, and split them into 160 training and 40 test examples. I fine-tuned Phi-3 Mini and Medium with Unsloth's memory-efficient QLoRA approach and measured accuracy by entity type, transaction-versus-offer classification, and detailed subcategory.
-- **SetFit Fine-Tuning & Deployment:** I fine-tuned SetFit for fast SMS classification, created text-normalization and noise-reduction preprocessing, integrated the model into a real-time FastAPI inference endpoint, and deployed it to Hugging Face Spaces.
+- **SetFit Training Data, Fine-Tuning & Deployment:** I prepared the SetFit training dataset from scratch for multiple levels of multiclass SMS classification, fine-tuned the model, created text-normalization and noise-reduction preprocessing, integrated it into a real-time FastAPI inference endpoint, and deployed it to Hugging Face Spaces. This classification work was part of the larger SMS pipeline that also extracted financial entities.
 
 #### Internship Technology Stack
 
@@ -458,6 +464,7 @@ During my six-month AI Engineering internship, I designed, built, benchmarked, a
 - Built a conversational Health Advisor and medical-document analysis APIs with OpenAI models, FastAPI, Streamlit, Docker, Google Cloud Storage, and Cloud Run.
 - Developed and deployed a health-insurance RAG system on Azure using OpenAI embeddings, Pinecone retrieval, Supabase conversation persistence, FastAPI, and Streamlit.
 - Built a medical-reasoning evaluation system over 7,000 USMLE questions using dynamic five-shot retrieval, Pinecone explanation embeddings, SQLite metadata, and five-way answer-option shuffling.
+- Designed a four-tier SMS intelligence pipeline across datasets ranging from more than 15,000 to more than 100,000 messages, spanning classification, quality filtering, category discovery, and financial-entity extraction.
 - Benchmarked LLaMA 3, Phi-3, GPT-4, and GPT-3.5 classification performance and quantization tradeoffs across dual NVIDIA T4 and 80 GB A100 GPU environments.
 - Fine-tuned Phi-3 Mini and Medium with Unsloth QLoRA on a curated 200-message SMS dataset, measuring performance across classification, entity, and subcategory tasks.
 - Fine-tuned and deployed a SetFit SMS classifier as a real-time FastAPI endpoint on Hugging Face Spaces with text-normalization and noise-reduction preprocessing.

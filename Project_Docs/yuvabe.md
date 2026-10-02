@@ -16,9 +16,10 @@ and marketing domains.
 ## Technical Work
 
 ### 1. High-Impact Architecture and Platform Work
-- **Architected a Production Multi-Agent AI Platform** — Architected and
-  deployed a production multi-agent AI platform serving 100,000+ users across
-  healthcare, finance, education, and marketing domains. Designed a routing
+- **Architected a Production Multi-Agent AI System** — Independently designed,
+  built, and deployed a multi-agent AI system for an established client
+  platform with 100,000+ total users during this work. That count describes
+  the overall client platform, not measured use of my AI system. Designed a routing
   layer that dynamically directs user queries to specialized agents for
   health advice, policy analysis, and document processing. Implemented
   OpenAI function calling, RAG pipelines, and multimodal text and voice
@@ -26,15 +27,20 @@ and marketing domains.
   Docker. This architecture enabled scalable, domain-aware AI responses
   while reducing hallucinations through grounded retrieval and agent
   specialization.
-- **Built a Production Retrieval-Augmented Generation Platform** — Developed
-  a full production RAG system capable of handling large document
+- **Added Voice to the In-App RAG Chatbot** — Integrated speech-to-text and
+  text-to-speech so the client's app could take spoken questions and play
+  spoken answers alongside the text chat. This app integration was separate
+  from the edge AI voice experiments below.
+- **Built Full-Time Document Q&A Services** — During the July 2024–August 2025
+  full-time role, developed RAG-backed APIs capable of handling large document
   collections such as insurance policies and medical reports. Implemented
   the complete pipeline including document parsing, semantic chunking,
   embedding generation using OpenAI models, vector storage in Pinecone,
   similarity search retrieval, and grounded response generation. Served the
   system through a FastAPI backend with conversation persistence via
-  Supabase, enabling reliable document-aware question answering for a
-  platform serving 100,000+ users.
+  Supabase, enabling document-aware question answering for an existing
+  client platform with 100,000+ total users. This full-time work followed
+  earlier internship health-document and policy-advisor systems.
 - **Designed AI Microservices Following MACH Architecture Principles** —
   Designed and deployed modular AI microservices using Python, FastAPI,
   Docker, and Azure cloud infrastructure. Followed MACH architecture
@@ -53,6 +59,13 @@ and marketing domains.
   reasoning, and document analysis. Implemented tool calling and context
   management across agents to ensure consistent responses while minimizing
   hallucinations in high-stakes advisory applications.
+- **Connected the Chatbot to Doctor Booking** — Built a FastAPI endpoint in
+  the existing chat API that used LLM function calling when users discussed
+  health issues. The API returned a Boolean consultation flag for the
+  existing mobile app to show its doctor-booking popup. Built a Streamlit
+  prototype to demonstrate the flow and worked with the mobile team on the
+  integration. The mobile popup and appointment-booking feature were not my
+  implementation.
 - **Built a Large-Scale Medical Reasoning Q&A System** — Developed a medical
   reasoning system using 7,000 USMLE examination questions to simulate
   expert-level medical problem solving. Implemented Chain of Thought
@@ -75,6 +88,10 @@ and marketing domains.
   3.0, BERT, SetFit, and GPT-4 models to perform binary classification,
   hierarchical category classification, and entity extraction. Processed
   more than 100,000 SMS messages across experimentation and production use.
+- **Prepared SetFit Training Data** — Created the labeled SetFit training dataset
+  from scratch for multiple levels of multiclass SMS classification. This was
+  part of the broader SMS work, which also extracted financial entities; it
+  was not just model fine-tuning on an existing dataset.
 - **Fine-Tuned Transformer Models for Noisy Real-World Data** — Fine-tuned
   BERT and SetFit models for SMS classification tasks involving noisy,
   real-world data containing informal language, abbreviations, and mixed
@@ -89,6 +106,9 @@ and marketing domains.
   data into actionable intelligence for marketing and product teams.
 
 ### 4. Edge AI and On-Device LLM Systems
+- **Explored Voice with On-Device LLMs** — Used Android native text-to-speech
+  and API-based speech-to-text with on-device language-model work. This was
+  separate from speech input and output in the client's in-app RAG chatbot.
 - **Researched and Implemented Fully Offline RAG Systems on Android** —
   Designed and implemented a complete on-device RAG architecture for Android
   that performs document parsing, embedding generation, vector search, and
@@ -180,7 +200,7 @@ and marketing domains.
   design decisions.
 
 ## Scale and Scope
-- 100,000+ users served by the multi-agent platform.
+- The existing client platform had 100,000+ total users during this work; usage of my multi-agent AI system was not separately measured.
 - 7,000 USMLE questions used to build the medical reasoning Q&A system.
 - More than 100,000 SMS messages processed across experimentation and production use.
 - ~19.6 tokens/sec on-device inference on a 6GB RAM Android device, 0.43GB
@@ -212,7 +232,7 @@ multimodal social-media intelligence pipelines, and open-source LLM
 function-calling evaluation.
 
 ## Ready-to-Use Highlights
-- Architected a multi-agent RAG platform serving 100,000+ users, routing queries to specialized domain agents via FastAPI on Azure.
+- Independently designed, built, and deployed a multi-agent FastAPI system on Azure for an existing client platform with 100,000+ total users; the figure is overall platform population, not AI-system usage.
 - Built a production RAG pipeline for insurance/medical documents using OpenAI embeddings, Pinecone retrieval, and Supabase persistence.
 - Designed agentic Chain-of-Thought/ReAct workflows with specialized sub-agents to cut hallucinations in advisory use cases.
 - Built a medical reasoning Q&A system on 7,000 USMLE questions, storing CoT traces in Pinecone/SQLite for retrieval-augmented inference.

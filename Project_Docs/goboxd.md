@@ -30,7 +30,7 @@ Isolation is **not** Docker-per-request. Docker packages the service itself (the
 15 languages via declarative YAML (`configs/languages.yaml`) — adding one needs only a YAML entry + install script, no Go changes. `POST /run` is the base contract; `POST /v1/run` adds raw single-run execution (no test cases), per-test exit codes, and a custom "evaluator" mode where a user-supplied grading program scores each test's output (returns a JSON verdict) instead of exact-match comparison.
 
 ## Scale and Quality
-The project contains roughly 6,000 lines of Go and 16 test files. GitHub Actions runs unit tests, `govulncheck`, linting, Docker builds, and Docker-based integration tests. Load testing with `hey` and `vegeta` sustained 503 requests per second at 50 concurrent clients with zero errors on an Apple M4. A constrained JVM workload exposed a throughput ceiling of approximately 5 requests per second under a 2 vCPU and 2 GB memory limit, which informed concurrency tuning.
+The project contains roughly 6,000 lines of Go and 16 test files. GitHub Actions runs unit tests, `govulncheck`, linting, Docker builds, and Docker-based integration tests. Load testing with `hey` and `vegeta` reported 503 requests per second at 50 concurrent clients with zero errors on an Apple M4. I no longer recall the exact code run in that test, so the figure is a historical test result rather than a general throughput measure. I also tested a memory-intensive Java program. A constrained JVM workload exposed a throughput ceiling of approximately 5 requests per second under a 2 vCPU and 2 GB memory limit, which informed concurrency tuning.
 
 ## Notable engineering decisions
 - Correctly separating the container's own Docker capabilities (needed only so nsjail can create nested namespaces) from nsjail's independent namespace/cgroup/seccomp sandbox, which is the actual security boundary for untrusted code
@@ -41,6 +41,6 @@ The project contains roughly 6,000 lines of Go and 16 test files. GitHub Actions
 ## Highlights
 - Architected a Go service that sandboxes untrusted code across 15 languages using `nsjail` (Linux namespaces, cgroup v2, seccomp-bpf), enforcing per-job CPU/memory/process limits.
 - Designed a 15-probe adversarial test harness covering fork bombs, ptrace and chroot escapes, network breakouts, and filesystem access.
-- Load-tested the execution API with `hey` and `vegeta`, sustaining 503 req/s at 50 concurrent clients with zero errors.
+- Load-tested the execution API with `hey` and `vegeta`; the exact workload behind the recorded 503 req/s result is no longer known.
 - Diagnosed a JVM-workload throughput ceiling of ~5 req/s under a 2 vCPU/2GB constraint, tracing the bottleneck to the concurrency semaphore size.
 - Implemented cgroup-based OOM detection via `memory.events`, distinguishing memory-limit kills from ordinary crashes that nsjail otherwise reports identically as SIGKILL.

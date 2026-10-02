@@ -1,10 +1,29 @@
 # Skills
 
+## Candidate-confirmed use — October 1, 2026
+
+### AI, data, and retrieval
+- Python, SQL, NumPy, Pandas, scikit-learn, PyTorch
+- LLMs, RAG, AI agents, multi-agent systems, prompt engineering, function calling, structured outputs, embeddings, vector search, fine-tuning
+- OpenAI API, Hugging Face Transformers, LangChain, LangGraph, Model Context Protocol (MCP), Ollama
+- Pinecone, ChromaDB, FAISS, Qdrant, pgvector, model evaluation, RAG evaluation
+
+### Backend, data, and security
+- Python, FastAPI, Flask, Django, Pydantic, asyncio, REST APIs, microservices, API design, system design
+- SQL, PostgreSQL, MySQL, MongoDB, Redis, SQLAlchemy, Alembic, Celery, Supabase
+- OAuth 2.0, JWT, role-based access control, authentication, authorization, caching, rate limiting, API versioning, unit testing, integration testing
+
+### Web applications and testing
+- JavaScript, TypeScript, React, Next.js, Vue.js, Vite, Tailwind CSS, Redux, Zustand, Pinia, TanStack Query, Vitest, Playwright, Node.js, Prisma
+- HTML, CSS, Bootstrap, and responsive design have also been used; omit basic or automatically understood items from broad resume Skills when stronger terms fit.
+
+### Cloud, delivery, and developer tools
+- Docker, Microsoft Azure, Google Cloud Platform (GCP), GitHub Actions, CI/CD, Sentry, Linux, pytest, Git, GitHub
+- Claude Code, Codex, GitHub Copilot
+
 ## Languages
 - Python
 - JavaScript / TypeScript
-- Go
-- C#
 - SQL
 - Bash
 
@@ -38,27 +57,9 @@
 - Nomic Embeddings
 - Hugging Face
 
-## Edge AI & On-Device Inference
-- ONNX Runtime
-- ONNX on Android
-- Llama.cpp
-- MediaPipe
-- Small Language Models (SLMs)
-
-## Avatars, Voice & Interactive AI
-- Unity
-- Three.js
-- TalkingHead.js
-- Ready Player Me SDK
-- Avaturn
-- Oculus Lip Sync
-- Blendshapes
-- Azure TTS
-
 ## Backend & APIs
 - FastAPI
 - Flask / flask-restx
-- ASP.NET (C#)
 - Node.js
 - REST API Design
 - Microservices
@@ -93,6 +94,9 @@
 - Git
 - Linux
 - CI/CD (GitHub Actions)
+
+## Testing
+- Python unit testing
 
 ## Data Science Tooling
 - NumPy / Pandas
